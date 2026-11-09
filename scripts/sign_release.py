@@ -10,7 +10,7 @@ from pathlib import Path
 from cryptography.hazmat.primitives import serialization
 
 from tessera_piano import __version__
-from tessera_piano.updates import canonical_manifest
+from tessera_piano.updates import canonical_manifest, verify_manifest
 from tessera_piano.update_trust import REPOSITORY
 
 
@@ -36,12 +36,18 @@ def main():
         },
     }
     manifest["signature"] = base64.b64encode(key.sign(canonical_manifest(manifest))).decode()
+    verify_manifest(manifest)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     args.installer.with_suffix(".exe.sha256").write_text(
         f"{digest}  {args.installer.name}\n", encoding="utf-8"
     )
     print("Manifesto assinado:", args.output)
+    changelog = Path("CHANGELOG.md").read_text(encoding="utf-8")
+    notes = changelog.split("## " + __version__ + "\n", 1)[1].split("\n## ", 1)[0].strip()
+    (args.output.parent / "release-notes.md").write_text(
+        notes + "\n\nWindows 10/11 x64. Instalação sem Python externo.\n", encoding="utf-8"
+    )
 
 
 if __name__ == "__main__":

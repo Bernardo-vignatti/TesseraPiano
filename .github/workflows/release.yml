@@ -41,4 +41,4 @@ jobs:
       - name: Publicar release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$env:GITHUB_REF_NAME" dist/TesseraPiano-Setup-*-x64.exe dist/update.json dist/*.sha256 --title "Tessera Piano $env:GITHUB_REF_NAME" --generate-notes --verify-tag
+        run: gh release create "$env:GITHUB_REF_NAME" dist/TesseraPiano-Setup-*-x64.exe dist/update.json dist/*.sha256 --title "Tessera Piano $env:GITHUB_REF_NAME" --notes-file dist/release-notes.md --verify-tag

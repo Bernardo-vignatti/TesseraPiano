@@ -63,6 +63,9 @@ def main():
     distribution = ROOT / "dist/TesseraPiano"
     # Qt usa a ICU do Windows; uma DLL de outro programa no PATH pode ter ABI incompatível.
     (distribution / "_internal/icuuc.dll").unlink(missing_ok=True)
+    for pattern in ("icudt*.dll", "icuin*.dll"):
+        for library in (distribution / "_internal").glob(pattern):
+            library.unlink()
     report = ROOT / "dist/build-health.json"
     report.unlink(missing_ok=True)
     subprocess.run(

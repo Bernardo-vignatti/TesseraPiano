@@ -64,4 +64,3 @@ function IsIsolatedTest: Boolean;
 begin
   Result := ExpandConstant('{param:ISOLATEDTEST|0}') = '1';
 end;
-
