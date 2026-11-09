@@ -1,0 +1,72 @@
+FONTES E LICENÇAS DO REPERTÓRIO — Piano Automático 2.0
+
+Conversões feitas a partir dos MIDIs das edições de piano do Mutopia Project,
+baixados do espelho oficial ibiblio. Não são transcrições inventadas de memória.
+Os arquivos originais MIDI e LilyPond acompanham esta pasta.
+
+Conversão: leitura de note-on/note-off, alterações de tempo e CC64; mapeamento
+para as 61 notas do piano da imagem. Notas fora da faixa foram deslocadas
+por oitavas. Durante a execução, sobreposições na mesma tecla física são
+rearticuladas; as demais notas mantêm durações independentes.
+Somente o tempo que existe no MIDI é preservado: indicações impressas sem
+evento MIDI correspondente não são inventadas. Intensidade MIDI não é enviada.
+
+Esta é uma coletânea: a licença de cada edição se aplica ao respectivo
+arquivo musical e sua conversão; os créditos permanecem em cada JSON.
+
+Für Elise — Beethoven
+Edição/digitação: Stelios Samelis / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=931
+Licença: Public Domain
+https://www.mutopiaproject.org/legal.html#publicdomain
+
+
+Sonata ao Luar — I. Adagio sostenuto
+Edição/digitação: Stewart Holmes / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=276
+Licença: CC BY-SA 2.5
+https://creativecommons.org/licenses/by-sa/2.5/
+A conversão JSON também é distribuída sob CC BY-SA 2.5.
+
+
+Gymnopédie nº 1 — Satie
+Edição/digitação: Evin Robertson / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=37
+Licença: Public Domain
+https://www.mutopiaproject.org/legal.html#publicdomain
+
+
+Clair de Lune — Debussy
+Edição/digitação: Keith OHara / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=1778
+Licença: Public Domain
+https://www.mutopiaproject.org/legal.html#publicdomain
+
+
+Prelúdio em Dó maior BWV 846 — Bach
+Edição/digitação: Tobias Erbsland / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=5
+Licença: Public Domain
+https://www.mutopiaproject.org/legal.html#publicdomain
+
+
+Prelúdio em Mi menor Op. 28 nº 4 — Chopin
+Edição/digitação: Magnus Lewis-Smith / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=468
+Licença: Public Domain
+https://www.mutopiaproject.org/legal.html#publicdomain
+
+
+Marcha Turca — Mozart
+Edição/digitação: Rune Zedeler e Chris Sawer / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=108
+Licença: Public Domain
+https://www.mutopiaproject.org/legal.html#publicdomain
+
+
+The Entertainer — Scott Joplin
+Edição/digitação: Chris Sawer / Mutopia Project
+Fonte: https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=263
+Licença: Public Domain
+https://www.mutopiaproject.org/legal.html#publicdomain
+

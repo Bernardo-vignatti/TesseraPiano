@@ -1,0 +1,9715 @@
+{
+  "format": "piano-2",
+  "time_unit": "seconds",
+  "title": "Für Elise — Beethoven",
+  "metadata": {
+    "source_file": "fur_Elise_WoO59.mid",
+    "midi_format": 1,
+    "tempo_events": 1,
+    "octave_adjusted_notes": 5,
+    "drum_notes_ignored": 0,
+    "total_duration": 130.41661449999927,
+    "velocity_preserved_not_transmitted": true,
+    "sustain": "CC64 preservado para controle nativo ou duração simulada",
+    "source_url": "https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=931",
+    "edition_credit": "Stelios Samelis",
+    "edition_license": "Public Domain",
+    "license_url": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "source_sha256": "a69838168d9ae7f7823baf3307d8837dfde872127a7d6fb949534e77966e0799",
+    "conversion_changes": "MIDI para eventos independentes; notas fora de C2–C7 ajustadas por oitava. Rearticulação de teclas compartilhadas durante execução.",
+    "midi_track_names": [
+      "control track",
+      "up",
+      "down"
+    ],
+    "display_title_source": "filename",
+    "keyboard_layout": "61",
+    "ticks_per_beat": 384,
+    "tempo_map": [
+      {
+        "time": 0.0,
+        "tick": 0,
+        "tempo": 833333
+      }
+    ],
+    "time_signatures": [
+      {
+        "time": 0.0,
+        "numerator": 3,
+        "denominator": 8
+      }
+    ],
+    "tracks": [
+      {
+        "id": 0,
+        "name": "control track",
+        "channels": []
+      },
+      {
+        "id": 1,
+        "name": "up",
+        "channels": [
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "name": "down",
+        "channels": [
+          2
+        ]
+      }
+    ],
+    "cc64_events": 66,
+    "channel_pedal": [
+      {
+        "time": 1.6666659999999995,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 2.4999989999999994,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 2.9166654999999992,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 3.749998499999999,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 4.166664999999999,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 4.999997999999999,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 6.666663999999998,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 7.499996999999998,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 7.916663499999998,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 8.7499965,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 11.24999550000001,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 12.083328500000013,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 12.499995000000014,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 13.333328000000018,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 13.74999450000002,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 17.291659750000022,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 19.99999200000001,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 20.833325000000006,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 21.249991500000004,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 22.0833245,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 22.499990999999998,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 23.333323999999994,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 24.999989999999986,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 25.833322999999982,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 26.24998949999998,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 27.083322499999976,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 51.24997949999993,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 52.08331249999994,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 52.499978999999946,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 53.33331199999996,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 54.99997799999998,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 55.83331099999999,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 56.24997749999999,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 57.0833105,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 58.749976500000024,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 59.583309500000034,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 62.49997500000007,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 64.79164075000007,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 97.49996099999942,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 103.7499584999997,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 104.99995799999968,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 105.83329099999966,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 106.24995749999965,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 107.08329049999963,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 107.49995699999963,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 108.33328999999961,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 109.99995599999957,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 110.83328899999955,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 111.24995549999954,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 112.08328849999953,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 113.74995449999949,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 114.58328749999947,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 114.99995399999946,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 115.83328699999944,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 116.24995349999944,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 117.08328649999942,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 117.49995299999941,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 119.79161874999936,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 122.4999509999993,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 123.33328399999928,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 123.74995049999927,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 124.58328349999925,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 127.49994899999919,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 128.3332819999992,
+        "channel": 2,
+        "down": false
+      },
+      {
+        "time": 128.74994849999922,
+        "channel": 2,
+        "down": true
+      },
+      {
+        "time": 129.58328149999926,
+        "channel": 2,
+        "down": false
+      }
+    ]
+  },
+  "notes": [
+    {
+      "key": "f",
+      "start": 0.0,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 0.208333,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 0.416666,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 0.625,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 0.833333,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 1.041666,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 1.249999,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 1.458333,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 1.666666,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 1.666666,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 1.874999,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 2.083332,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 2.291666,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 2.499999,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 2.708332,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 2.916665,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 2.916665,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 3.124999,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 3.333332,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 3.541665,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "O",
+      "start": 3.749998,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 3.958332,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 4.166665,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 4.166665,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 4.374998,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 4.583331,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 4.791665,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 4.999998,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 5.208331,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 5.416664,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 5.624998,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 5.833331,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 6.041664,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 6.249997,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 6.458331,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 6.666664,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 6.666664,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 6.874997,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 7.08333,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 7.291664,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 7.499997,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 7.70833,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 7.916663,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 7.916663,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 8.124997,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 8.33333,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 8.541663,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 8.749996,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 8.95833,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 9.166663,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 9.166663,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 9.374996,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 9.58333,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 9.999996,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 9.999996,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 10.208329,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 10.416663,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 10.624996,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 10.833329,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 11.041662,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "8",
+      "start": 11.249996,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 11.249996,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 11.458329,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 11.666662,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 11.874995,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 12.083329,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 12.291662,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 12.499995,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 12.499995,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 12.708328,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "r",
+      "start": 12.916662,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 13.124995,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 13.333328,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 13.541661,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 13.749995,
+      "duration": 3.541665,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 13.749995,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 13.958328,
+      "duration": 3.333332,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 14.166661,
+      "duration": 3.124999,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 14.374994,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 14.583328,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 14.791661,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 14.999994,
+      "duration": 2.291666,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 14.999994,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 15.208327,
+      "duration": 2.083332,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 15.416661,
+      "duration": 1.874999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 15.624994,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 15.833327,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 16.04166,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 16.249994,
+      "duration": 1.041666,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 16.458327,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "x",
+      "start": 16.66666,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 88,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 16.874993,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 17.083327,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 17.29166,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 17.499993,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 17.708326,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 17.91666,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 18.124993,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 18.333326,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 18.541659,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 18.749993,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 18.958326,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 19.166659,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 19.374992,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 19.583326,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 19.791659,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 19.999992,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 19.999992,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 20.208325,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 20.416659,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 20.624992,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 20.833325,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 21.041658,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 21.249992,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 21.249992,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 21.458325,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 21.666658,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 21.874991,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "O",
+      "start": 22.083324,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 22.291658,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 22.499991,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 22.499991,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 22.708324,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 22.916657,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 23.124991,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 23.333324,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 23.541657,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 23.74999,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 23.958324,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 24.166657,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 24.37499,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 24.583323,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 24.791657,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 24.99999,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 24.99999,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 25.208323,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 25.416656,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 25.62499,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 25.833323,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 26.041656,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 26.249989,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 26.249989,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 26.458323,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 26.666656,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 26.874989,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 27.083322,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 27.291656,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 27.499989,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 27.499989,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 27.708322,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 27.916655,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 28.124989,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 28.333322,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 28.541655,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 28.749988,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 28.749988,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 28.958322,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 29.166655,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "E",
+      "start": 29.374988,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 58,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 29.374988,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 29.374988,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 29.374988,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 29.583321,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 29.583321,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 29.583321,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 29.583321,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "E",
+      "start": 29.791655,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 58,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 29.791655,
+      "duration": 0.112847,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.112847,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 29.791655,
+      "duration": 0.112847,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.112847,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 29.791655,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 29.791655,
+      "duration": 0.112847,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.112847,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 29.791655,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 29.904502,
+      "duration": 0.045573,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.045573,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 29.952245,
+      "duration": 0.045573,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.045573,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 29.999988,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 29.999988,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 30.208321,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 30.416654,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 30.624988,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "g",
+      "start": 30.833321,
+      "duration": 0.3125,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.3125,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 30.833321,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 31.041654,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 31.145821,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 31.249987,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 31.249987,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "E",
+      "start": 31.458321,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 58,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 31.666654,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 31.666654,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "E",
+      "start": 31.874987,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 58,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "J",
+      "start": 32.08332,
+      "duration": 0.3125,
+      "velocity": 127,
+      "pitch": 82,
+      "gate_duration": 0.3125,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 32.08332,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "E",
+      "start": 32.291654,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 58,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "j",
+      "start": 32.39582,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "j",
+      "start": 32.499987,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 32.499987,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 32.70832,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 32.70832,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "E",
+      "start": 32.916653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 58,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "g",
+      "start": 32.916653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 32.916653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 32.916653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 33.124987,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 33.124987,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "E",
+      "start": 33.33332,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 58,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 33.33332,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 33.33332,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 33.33332,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 33.541653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 33.541653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "P",
+      "start": 33.749986,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 70,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 33.749986,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 33.95832,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 34.166653,
+      "duration": 0.392795,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.392795,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 34.166653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 34.374986,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "P",
+      "start": 34.559448,
+      "duration": 0.021701,
+      "velocity": 127,
+      "pitch": 70,
+      "gate_duration": 0.021701,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 34.583319,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 34.583319,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 34.687486,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 34.791653,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 34.791653,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "P",
+      "start": 34.895819,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 70,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 34.999986,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 34.999986,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 35.208319,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 35.416652,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 35.624986,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 35.833319,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 35.833319,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 36.041652,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 36.041652,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "0",
+      "start": 36.249985,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 36.249985,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 36.458319,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 36.666652,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 36.874985,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 36.874985,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "9",
+      "start": 37.083318,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 50,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "g",
+      "start": 37.083318,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 37.083318,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 37.291652,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 37.291652,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 37.499985,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 37.499985,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 37.708318,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 37.916652,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 38.124985,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 38.333318,
+      "duration": 0.3125,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.3125,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 38.333318,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 38.541651,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 38.645818,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 38.749985,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 38.749985,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 38.749985,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 38.854151,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 38.958318,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "h",
+      "start": 39.062484,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 39.166651,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "h",
+      "start": 39.270818,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 39.374984,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 39.374984,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 39.374984,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 39.479151,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 39.583317,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 39.583317,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 39.583317,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 39.687484,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 39.791651,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 39.791651,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 39.791651,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 39.791651,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 39.895817,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 39.999984,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 39.999984,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 39.999984,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 39.999984,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 40.104151,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "l",
+      "start": 40.208317,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 84,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "k",
+      "start": 40.312484,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 83,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 40.41665,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "j",
+      "start": 40.41665,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 40.41665,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 40.520817,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 40.624984,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 40.72915,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 40.833317,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 40.833317,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 40.833317,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 40.937484,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 41.04165,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 41.145817,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 41.249983,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 41.249983,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 41.35415,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 41.458317,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "h",
+      "start": 41.562483,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 41.66665,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "h",
+      "start": 41.770817,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 41.874983,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 41.874983,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 41.874983,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 41.97915,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 42.083316,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 42.083316,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 42.083316,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 42.187483,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 42.29165,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 42.29165,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 42.29165,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 42.29165,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 42.395816,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 42.499983,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 42.499983,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 42.499983,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 42.499983,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 42.60415,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "l",
+      "start": 42.708316,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 84,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "k",
+      "start": 42.812483,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 83,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 42.916649,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "j",
+      "start": 42.916649,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "q",
+      "start": 42.916649,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 43.020816,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 43.124983,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 43.229149,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 43.333316,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 43.333316,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 43.333316,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 43.437483,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 43.541649,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 43.645816,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "W",
+      "start": 43.749982,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 43.749982,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 43.749982,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "g",
+      "start": 43.854149,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 43.958316,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 44.062482,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 44.166649,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 44.270816,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 44.374982,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 44.479149,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 44.583315,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 44.687482,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 44.791649,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 44.895815,
+      "duration": 0.104167,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.104167,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 44.999982,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 45.624982,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 45.833315,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 46.041648,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 46.249981,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 46.874981,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 47.083314,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 47.291648,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 47.499981,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 47.708314,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 47.916647,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 48.124981,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 48.333314,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 48.541647,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 48.74998,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 48.958314,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 49.166647,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 49.37498,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 49.583313,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 49.791647,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 49.99998,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 49.99998,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 50.208313,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 50.416646,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 50.62498,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 50.833313,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 51.041646,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 51.249979,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 51.249979,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 51.458313,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 51.666646,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 51.874979,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "O",
+      "start": 52.083312,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 52.291646,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 52.499979,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 52.499979,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 52.708312,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 52.916645,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 53.124979,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 53.333312,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 53.541645,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 53.749978,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 53.958312,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 54.166645,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 54.374978,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 54.583311,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 54.791645,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 54.999978,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 54.999978,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 55.208311,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 55.416644,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 55.624978,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 55.833311,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 56.041644,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 56.249977,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 56.249977,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 56.458311,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 56.666644,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 56.874977,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 57.083311,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 57.291644,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 57.499977,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 57.499977,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 57.70831,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 57.916644,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 58.124977,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 58.33331,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 58.541643,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "8",
+      "start": 58.749977,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 58.749977,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 58.95831,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 59.166643,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 59.374976,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 59.58331,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 59.791643,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 59.999976,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 59.999976,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 60.208309,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "r",
+      "start": 60.416643,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 60.624976,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 60.833309,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 61.041642,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 61.249976,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 61.249976,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 61.458309,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 61.666642,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 61.874975,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 62.083309,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 62.291642,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 62.499975,
+      "duration": 2.291666,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 62.499975,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 62.708308,
+      "duration": 2.083332,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 62.916642,
+      "duration": 1.874999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 63.124975,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 63.333308,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 63.541641,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 63.749975,
+      "duration": 1.041666,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 63.958308,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "x",
+      "start": 64.166641,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 88,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 64.374974,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 64.583308,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 64.791641,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 64.999974,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 65.208307,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 65.416641,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 65.624974,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 65.833307,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 66.04164,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 66.249974,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 66.458307,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 66.66664,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 66.874973,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 67.083307,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 67.29164,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 67.499973,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 67.499973,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 67.708306,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 67.91664,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 68.124973,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 68.333306,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 68.541639,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 68.749972,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 68.749972,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 68.958306,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 69.166639,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 69.374972,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "O",
+      "start": 69.583305,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 69.791639,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 69.999972,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 69.999972,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 70.208305,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 70.416638,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 70.624972,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 70.833305,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 71.041638,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 71.249971,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 71.458305,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 71.666638,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 71.874971,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 72.083304,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 72.291638,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 72.499971,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 72.499971,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 72.708304,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 72.916637,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 73.124971,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 73.333304,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 73.541637,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 73.74997,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 73.74997,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 73.958304,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 74.166637,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 74.37497,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 74.583303,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 74.791637,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 74.99997,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 74.99997,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 75.208303,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 75.416636,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 75.62497,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 75.833303,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 76.041636,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 76.249969,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "P",
+      "start": 76.249969,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 70,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "S",
+      "start": 76.249969,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 76.249969,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 76.249969,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 76.458303,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 76.666636,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 76.874969,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 77.083302,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 77.291636,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 77.499969,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 77.499969,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 77.499969,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 77.499969,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 77.708302,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 77.916635,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 78.124969,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 78.333302,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "S",
+      "start": 78.333302,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 78.333302,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 78.541635,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 78.541635,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 78.541635,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 78.749968,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "O",
+      "start": 78.749968,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 78.749968,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 78.749968,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 78.958302,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 79.166635,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 79.374968,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 79.583301,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "O",
+      "start": 79.583301,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 79.583301,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 79.583301,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 79.791635,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 79.999968,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 79.999968,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 79.999968,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 79.999968,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 80.208301,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 80.416634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 80.624968,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 80.833301,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 81.041634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 81.249967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 81.249967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 81.249967,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 81.249967,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 81.458301,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 81.458301,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 81.666634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 81.666634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 81.874967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 81.874967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 82.0833,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 82.0833,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 82.0833,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 82.0833,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 82.291634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 82.291634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 82.291634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 82.291634,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 82.499967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "@",
+      "start": 82.499967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 39,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 82.499967,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 82.499967,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 82.499967,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 82.7083,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "@",
+      "start": 82.7083,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 39,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 82.916633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "@",
+      "start": 82.916633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 39,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 83.124967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "@",
+      "start": 83.124967,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 39,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 83.3333,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "@",
+      "start": 83.3333,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 39,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 83.3333,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 83.3333,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 83.541633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "@",
+      "start": 83.541633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 39,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "3",
+      "start": 83.749966,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 83.749966,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 83.749966,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 83.749966,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 83.9583,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 83.9583,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "3",
+      "start": 84.166633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 84.166633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 84.166633,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 84.166633,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 84.374966,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 84.374966,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "%",
+      "start": 84.583299,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 44,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "3",
+      "start": 84.583299,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 84.583299,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 84.583299,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "%",
+      "start": 84.791633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 44,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "3",
+      "start": 84.791633,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 84.999966,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 33,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 84.999966,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 84.999966,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 84.999966,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 85.208299,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 85.416632,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 85.624966,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 85.833299,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 86.041632,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 86.249965,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "P",
+      "start": 86.249965,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 70,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "S",
+      "start": 86.249965,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 86.249965,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 86.249965,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 86.458299,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 86.666632,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 86.874965,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 87.083298,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 87.291632,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 87.499965,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 87.499965,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 87.499965,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 87.499965,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 87.708298,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 87.916631,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 88.124965,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 88.333298,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "S",
+      "start": 88.333298,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 88.333298,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 88.541631,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 88.541631,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 88.541631,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 88.749964,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 88.749964,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 88.749964,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 88.958298,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 89.166631,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 89.374964,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 89.583297,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 89.583297,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 89.583297,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 89.791631,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 89.999964,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 89.999964,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 89.999964,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 1.249999,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "^",
+      "start": 90.208297,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 90.41663,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 90.624964,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 90.833297,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 91.04163,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 91.249963,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "^",
+      "start": 91.249963,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 91.249963,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "^",
+      "start": 91.458297,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 91.66663,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 91.874963,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 92.083296,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 92.083296,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 92.083296,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "Y",
+      "start": 92.29163,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 63,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "^",
+      "start": 92.29163,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 92.29163,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "P",
+      "start": 92.499963,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 70,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "^",
+      "start": 92.499963,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 92.499963,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 92.499963,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "^",
+      "start": 92.708296,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 92.916629,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 93.124963,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "^",
+      "start": 93.333296,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 93.333296,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 93.333296,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 93.333296,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "^",
+      "start": 93.541629,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 46,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "7",
+      "start": 93.749962,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "O",
+      "start": 93.749962,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 93.749962,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 93.749962,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "7",
+      "start": 93.958296,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "7",
+      "start": 94.166629,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "7",
+      "start": 94.374962,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "7",
+      "start": 94.583295,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "O",
+      "start": 94.583295,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 94.583295,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 94.583295,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "7",
+      "start": 94.791629,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "8",
+      "start": 94.999962,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 0.833333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 94.999962,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 94.999962,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 94.999962,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.833333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 96.249961,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 96.249961,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 96.249961,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 96.249961,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 97.499961,
+      "duration": 6.249998,
+      "velocity": 127,
+      "pitch": 33,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 97.499961,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 97.63885,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 97.777739,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 97.916627,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 98.055516,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 98.194405,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 98.333294,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 98.333294,
+      "duration": 5.416665,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 98.333294,
+      "duration": 5.416665,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 98.333294,
+      "duration": 5.416665,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 98.472183,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 98.611072,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 98.74996,
+      "duration": 4.999998,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 98.74996,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 98.74996,
+      "duration": 4.999998,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 98.74996,
+      "duration": 4.999998,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 98.888849,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 99.027738,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "j",
+      "start": 99.166627,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "l",
+      "start": 99.305516,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 84,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "x",
+      "start": 99.444405,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 88,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 99.583293,
+      "duration": 4.166665,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 99.583293,
+      "duration": 4.166665,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 99.583293,
+      "duration": 4.166665,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "z",
+      "start": 99.583293,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 86,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "l",
+      "start": 99.722182,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 84,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "k",
+      "start": 99.861071,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 83,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 99.99996,
+      "duration": 3.749999,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "j",
+      "start": 99.99996,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 99.99996,
+      "duration": 3.749999,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 99.99996,
+      "duration": 3.749999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "l",
+      "start": 100.138849,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 84,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "x",
+      "start": 100.277738,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 88,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "b",
+      "start": 100.416626,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 93,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "m",
+      "start": 100.555515,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 96,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "x",
+      "start": 100.694404,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 100,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 100.833293,
+      "duration": 2.916666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 100.833293,
+      "duration": 2.916666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 100.833293,
+      "duration": 2.916666,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "z",
+      "start": 100.833293,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 98,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "m",
+      "start": 100.972182,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 96,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "n",
+      "start": 101.111071,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 95,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "B",
+      "start": 101.249959,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 94,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 101.249959,
+      "duration": 2.499999,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 101.249959,
+      "duration": 2.499999,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 101.249959,
+      "duration": 2.499999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.416667,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "b",
+      "start": 101.388848,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 93,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "V",
+      "start": 101.527737,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 92,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "v",
+      "start": 101.666626,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 91,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "C",
+      "start": 101.805515,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 90,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "c",
+      "start": 101.944404,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 89,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "x",
+      "start": 102.083292,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 88,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "Z",
+      "start": 102.222181,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 87,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "z",
+      "start": 102.36107,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 86,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "L",
+      "start": 102.499959,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 85,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "l",
+      "start": 102.638848,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 84,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "k",
+      "start": 102.777737,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 83,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "J",
+      "start": 102.916625,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 82,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "j",
+      "start": 103.055514,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "H",
+      "start": 103.194403,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 80,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "h",
+      "start": 103.333292,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "G",
+      "start": 103.472181,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 78,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 103.61107,
+      "duration": 0.138889,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.138889,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 103.749958,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 103.958292,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 104.166625,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 104.374958,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 104.583291,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 104.791625,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 104.999958,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 104.999958,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 105.208291,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 105.416624,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 105.624958,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 105.833291,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 106.041624,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 106.249957,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 106.249957,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 106.458291,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 106.666624,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 106.874957,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "O",
+      "start": 107.08329,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 107.291624,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 107.499957,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 107.499957,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 107.70829,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 107.916623,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 108.124957,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 108.33329,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 108.541623,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 108.749956,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 108.95829,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 109.166623,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 109.374956,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 109.583289,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 109.791623,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 109.999956,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 109.999956,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 110.208289,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 110.416622,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 110.624956,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 110.833289,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 111.041622,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 111.249955,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 111.249955,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 111.458289,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 111.666622,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 111.874955,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 112.083288,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 112.291622,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 112.499955,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 112.499955,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 112.708288,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 112.916621,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 113.124955,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 113.333288,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 113.541621,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "8",
+      "start": 113.749954,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 113.749954,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 113.958288,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 114.166621,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 114.374954,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 114.583287,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 114.791621,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 114.999954,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 114.999954,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 115.208287,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "r",
+      "start": 115.41662,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 115.624954,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 115.833287,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 116.04162,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 116.249953,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 116.249953,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.625,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 116.458287,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 116.66662,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 116.874953,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 117.083286,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 117.29162,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 117.499953,
+      "duration": 2.291666,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 117.499953,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 117.708286,
+      "duration": 2.083332,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 117.916619,
+      "duration": 1.874999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 118.124953,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 118.333286,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 118.541619,
+      "duration": 1.249999,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 118.749952,
+      "duration": 1.041666,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 118.958286,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "x",
+      "start": 119.166619,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 88,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 119.374952,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 119.583285,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 119.791619,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 119.999952,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 120.208285,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 120.416618,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "D",
+      "start": 120.624952,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 120.833285,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 121.041618,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 121.249951,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 121.458285,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 121.666618,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 121.874951,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 122.083284,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 122.291618,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 122.499951,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 122.499951,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 122.708284,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 122.916617,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 123.124951,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 123.333284,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 123.541617,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 123.74995,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 123.74995,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 123.958284,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 124.166617,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 124.37495,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "O",
+      "start": 124.583283,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 68,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 124.791617,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 124.99995,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 124.99995,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 125.208283,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 125.416616,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 125.62495,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 125.833283,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 126.041616,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 126.249949,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "D",
+      "start": 126.458283,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 75,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 126.666616,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 126.874949,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 127.083282,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 127.291616,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 127.499949,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 127.499949,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 127.708282,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 127.916615,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 128.124949,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 128.333282,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 128.541615,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 128.749948,
+      "duration": 0.833333,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 128.749948,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.416667,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 128.958282,
+      "duration": 0.625,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "W",
+      "start": 129.166615,
+      "duration": 0.416667,
+      "velocity": 127,
+      "pitch": 56,
+      "gate_duration": 0.208333,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 129.374948,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 129.583281,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 129.791615,
+      "duration": 0.208333,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 0.208333,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 129.999948,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 33,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 129.999948,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 0.416666,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 129.999948,
+      "duration": 0.416666,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 0.416666,
+      "track": 1,
+      "channel": 1
+    }
+  ],
+  "pedal": [
+    {
+      "time": 1.666666,
+      "down": true
+    },
+    {
+      "time": 2.499999,
+      "down": false
+    },
+    {
+      "time": 2.916665,
+      "down": true
+    },
+    {
+      "time": 3.749998,
+      "down": false
+    },
+    {
+      "time": 4.166665,
+      "down": true
+    },
+    {
+      "time": 4.999998,
+      "down": false
+    },
+    {
+      "time": 6.666664,
+      "down": true
+    },
+    {
+      "time": 7.499997,
+      "down": false
+    },
+    {
+      "time": 7.916663,
+      "down": true
+    },
+    {
+      "time": 8.749996,
+      "down": false
+    },
+    {
+      "time": 11.249996,
+      "down": true
+    },
+    {
+      "time": 12.083329,
+      "down": false
+    },
+    {
+      "time": 12.499995,
+      "down": true
+    },
+    {
+      "time": 13.333328,
+      "down": false
+    },
+    {
+      "time": 13.749995,
+      "down": true
+    },
+    {
+      "time": 17.29166,
+      "down": false
+    },
+    {
+      "time": 19.999992,
+      "down": true
+    },
+    {
+      "time": 20.833325,
+      "down": false
+    },
+    {
+      "time": 21.249992,
+      "down": true
+    },
+    {
+      "time": 22.083324,
+      "down": false
+    },
+    {
+      "time": 22.499991,
+      "down": true
+    },
+    {
+      "time": 23.333324,
+      "down": false
+    },
+    {
+      "time": 24.99999,
+      "down": true
+    },
+    {
+      "time": 25.833323,
+      "down": false
+    },
+    {
+      "time": 26.249989,
+      "down": true
+    },
+    {
+      "time": 27.083322,
+      "down": false
+    },
+    {
+      "time": 51.249979,
+      "down": true
+    },
+    {
+      "time": 52.083312,
+      "down": false
+    },
+    {
+      "time": 52.499979,
+      "down": true
+    },
+    {
+      "time": 53.333312,
+      "down": false
+    },
+    {
+      "time": 54.999978,
+      "down": true
+    },
+    {
+      "time": 55.833311,
+      "down": false
+    },
+    {
+      "time": 56.249977,
+      "down": true
+    },
+    {
+      "time": 57.083311,
+      "down": false
+    },
+    {
+      "time": 58.749977,
+      "down": true
+    },
+    {
+      "time": 59.58331,
+      "down": false
+    },
+    {
+      "time": 62.499975,
+      "down": true
+    },
+    {
+      "time": 64.791641,
+      "down": false
+    },
+    {
+      "time": 97.499961,
+      "down": true
+    },
+    {
+      "time": 103.749958,
+      "down": false
+    },
+    {
+      "time": 104.999958,
+      "down": true
+    },
+    {
+      "time": 105.833291,
+      "down": false
+    },
+    {
+      "time": 106.249957,
+      "down": true
+    },
+    {
+      "time": 107.08329,
+      "down": false
+    },
+    {
+      "time": 107.499957,
+      "down": true
+    },
+    {
+      "time": 108.33329,
+      "down": false
+    },
+    {
+      "time": 109.999956,
+      "down": true
+    },
+    {
+      "time": 110.833289,
+      "down": false
+    },
+    {
+      "time": 111.249955,
+      "down": true
+    },
+    {
+      "time": 112.083288,
+      "down": false
+    },
+    {
+      "time": 113.749954,
+      "down": true
+    },
+    {
+      "time": 114.583287,
+      "down": false
+    },
+    {
+      "time": 114.999954,
+      "down": true
+    },
+    {
+      "time": 115.833287,
+      "down": false
+    },
+    {
+      "time": 116.249953,
+      "down": true
+    },
+    {
+      "time": 117.083286,
+      "down": false
+    },
+    {
+      "time": 117.499953,
+      "down": true
+    },
+    {
+      "time": 119.791619,
+      "down": false
+    },
+    {
+      "time": 122.499951,
+      "down": true
+    },
+    {
+      "time": 123.333284,
+      "down": false
+    },
+    {
+      "time": 123.74995,
+      "down": true
+    },
+    {
+      "time": 124.583283,
+      "down": false
+    },
+    {
+      "time": 127.499949,
+      "down": true
+    },
+    {
+      "time": 128.333282,
+      "down": false
+    },
+    {
+      "time": 128.749948,
+      "down": true
+    },
+    {
+      "time": 129.583281,
+      "down": false
+    }
+  ]
+}

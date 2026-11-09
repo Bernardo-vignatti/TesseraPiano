@@ -1,0 +1,9 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.qml text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.ps1 text eol=crlf
+src/tessera_piano/resources/music/*.json linguist-generated=true
+src/tessera_piano/resources/sources/** linguist-vendored=true -text -whitespace
+packaging/licenses/** linguist-vendored=true

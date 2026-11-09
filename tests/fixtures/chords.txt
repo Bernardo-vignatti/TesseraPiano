@@ -1,0 +1,6 @@
+# Exemplo simples para testar brancas, pretas e acordes.
+# Comece devagar: BPM 90.
+a s d f g f d s a:2 -
+[adg]:2 - [sfh]:2 - [dgj]:2 - [adg]:2 -
+q Q w W e E r t T y Y u -
+1 ! 2 @ 3 4 $ 5 % 6 ^ 7 8 * 9 ( 0

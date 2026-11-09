@@ -1,0 +1,2859 @@
+{
+  "format": "piano-2",
+  "time_unit": "seconds",
+  "title": "Gymnopédie nº 1 — Satie",
+  "metadata": {
+    "source_file": "gymnopedie_1.mid",
+    "midi_format": 1,
+    "tempo_events": 2,
+    "octave_adjusted_notes": 3,
+    "drum_notes_ignored": 0,
+    "total_duration": 141.0,
+    "velocity_preserved_not_transmitted": true,
+    "sustain": "CC64 preservado para controle nativo ou duração simulada",
+    "source_url": "https://www.ibiblio.org/mutopia/cgibin/piece-info.cgi?id=37",
+    "edition_credit": "Evin Robertson",
+    "edition_license": "Public Domain",
+    "license_url": "https://www.mutopiaproject.org/legal.html#publicdomain",
+    "source_sha256": "b34df153dfefab99aab38115cb6797f5a3d6f4bd26708c194c7e9c4dbb8eafa1",
+    "conversion_changes": "MIDI para eventos independentes; notas fora de C2–C7 ajustadas por oitava. Rearticulação de teclas compartilhadas durante execução.",
+    "midi_track_names": [
+      "Track 0",
+      "treble",
+      "bass"
+    ],
+    "display_title_source": "filename",
+    "keyboard_layout": "61",
+    "ticks_per_beat": 384,
+    "tempo_map": [
+      {
+        "time": 0.0,
+        "tick": 0,
+        "tempo": 1000000
+      },
+      {
+        "time": 0.0,
+        "tick": 0,
+        "tempo": 1000000
+      }
+    ],
+    "time_signatures": [
+      {
+        "time": 0.0,
+        "numerator": 3,
+        "denominator": 4
+      },
+      {
+        "time": 0.0,
+        "numerator": 3,
+        "denominator": 4
+      }
+    ],
+    "tracks": [
+      {
+        "id": 0,
+        "name": "Track 0",
+        "channels": []
+      },
+      {
+        "id": 1,
+        "name": "treble",
+        "channels": [
+          1
+        ]
+      },
+      {
+        "id": 2,
+        "name": "bass",
+        "channels": [
+          2
+        ]
+      }
+    ],
+    "cc64_events": 0,
+    "channel_pedal": []
+  },
+  "notes": [
+    {
+      "key": "5",
+      "start": 0.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 1.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 1.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 1.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 3.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 4.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 4.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 4.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 6.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 7.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 7.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 7.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 9.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 10.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 10.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 10.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 12.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "G",
+      "start": 13.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 78,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 13.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 13.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 13.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "j",
+      "start": 14.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 15.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 15.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "G",
+      "start": 16.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 78,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 16.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 16.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 16.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "S",
+      "start": 17.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 18.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 18.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 19.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "S",
+      "start": 19.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 19.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 19.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 20.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 21.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 21.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 22.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 22.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 22.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 24.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 24.0,
+      "duration": 12.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 12.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 25.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 25.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 27.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "T",
+      "start": 28.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 28.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 30.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "r",
+      "start": 31.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 31.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 33.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "T",
+      "start": 34.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 34.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 36.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "G",
+      "start": 37.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 78,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 37.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 37.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 37.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "j",
+      "start": 38.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 39.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 39.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "G",
+      "start": 40.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 78,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 40.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 40.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 40.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "S",
+      "start": 41.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "5",
+      "start": 42.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 43,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 42.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 43.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "S",
+      "start": 43.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 43.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 43.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 44.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 45.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 45.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 46.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 46.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 46.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "$",
+      "start": 48.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 42,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "S",
+      "start": 48.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 49.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 49.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 49.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "7",
+      "start": 51.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 35,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "G",
+      "start": 51.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 78,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 52.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 52.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 52.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 54.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 54.0,
+      "duration": 9.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 9.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 55.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 55.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "3",
+      "start": 57.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 58.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "r",
+      "start": 58.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 58.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 60.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 61.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "q",
+      "start": 61.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 53,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 61.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 63.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 33,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 63.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 64.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 64.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 64.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 64.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 65.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 66.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 66.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 67.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 67.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 67.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 67.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 68.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 69.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 69.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "9",
+      "start": 70.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 50,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "r",
+      "start": 70.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 70.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 70.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 70.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 71.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 72.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 72.0,
+      "duration": 5.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 5.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 73.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "8",
+      "start": 73.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 73.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 73.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 75.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "8",
+      "start": 76.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "Q",
+      "start": 76.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 54,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 76.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 76.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 77.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 78.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 78.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 79.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "g",
+      "start": 79.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 79.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "t",
+      "start": 79.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 80.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 81.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "j",
+      "start": 81.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 81,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 82.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "s",
+      "start": 82.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 82.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 82.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 83.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 84.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 84.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "9",
+      "start": 85.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 50,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 85.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 85.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "u",
+      "start": 85.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "w",
+      "start": 85.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 86.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "2",
+      "start": 87.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 87.0,
+      "duration": 5.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 5.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 88.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "8",
+      "start": 88.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 88.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 88.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 90.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "8",
+      "start": 91.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 48,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "Q",
+      "start": 91.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 54,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 91.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "y",
+      "start": 91.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 92.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 93.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 93.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 94.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 94.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 94.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "$",
+      "start": 96.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 42,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "G",
+      "start": 96.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 78,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 97.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 97.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 97.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "7",
+      "start": 99.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 35,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 99.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 100.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 100.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 100.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 100.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "a",
+      "start": 101.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 102.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "S",
+      "start": 102.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 103.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 103.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 103.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 103.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 104.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 105.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "S",
+      "start": 105.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 73,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "I",
+      "start": 106.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "T",
+      "start": 106.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 61,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 106.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 106.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 106.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "f",
+      "start": 107.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 108.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 108.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "7",
+      "start": 109.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 1.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 109.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 109.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 110.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 1.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 110.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 110.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 110.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 111.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 111.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 111.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 111.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 111.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 111.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 114.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 114.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "9",
+      "start": 114.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 50,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "I",
+      "start": 114.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 66,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 114.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 114.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 114.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 117.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "h",
+      "start": 117.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 79,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "o",
+      "start": 118.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 118.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 118.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 120.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "g",
+      "start": 120.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 121.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 121.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 121.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 121.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 123.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "a",
+      "start": 123.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 71,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 124.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 124.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 124.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 124.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "g",
+      "start": 125.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 77,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 126.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 126.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 127.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 127.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 127.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 127.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 128.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 129.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "f",
+      "start": 129.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 76,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "d",
+      "start": 130.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "e",
+      "start": 130.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 130.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 130.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 130.0,
+      "duration": 2.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 2.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 131.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "3",
+      "start": 132.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 40,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "i",
+      "start": 132.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "7",
+      "start": 133.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 47,
+      "gate_duration": 1.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "e",
+      "start": 133.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 57,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 133.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "0",
+      "start": 134.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 52,
+      "gate_duration": 1.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "o",
+      "start": 134.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 67,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "r",
+      "start": 134.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 59,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 134.0,
+      "duration": 1.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 1.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "6",
+      "start": 135.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "p",
+      "start": 135.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "s",
+      "start": 135.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 72,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "t",
+      "start": 135.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 60,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "u",
+      "start": 135.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 64,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "w",
+      "start": 135.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 55,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "2",
+      "start": 138.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 38,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "6",
+      "start": 138.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 45,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "9",
+      "start": 138.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 50,
+      "gate_duration": 3.0,
+      "track": 2,
+      "channel": 2
+    },
+    {
+      "key": "d",
+      "start": 138.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 74,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "i",
+      "start": 138.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 65,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "p",
+      "start": 138.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 69,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    },
+    {
+      "key": "y",
+      "start": 138.0,
+      "duration": 3.0,
+      "velocity": 127,
+      "pitch": 62,
+      "gate_duration": 3.0,
+      "track": 1,
+      "channel": 1
+    }
+  ],
+  "pedal": []
+}
