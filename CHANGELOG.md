@@ -1,5 +1,10 @@
 # Alterações
 
+## 4.0.1
+
+- O pedal automático reconhece MIDIs com apenas um reset CC64 inicial e gera sustentação para esses arquivos.
+- A versão do pacote e do instalador passam a usar a mesma definição do aplicativo.
+
 ## 4.0.0
 
 - Interface Qt Quick com temas claro, escuro e do sistema, navegação por teclado e redução de movimento.

@@ -54,3 +54,22 @@ def test_all_notes_off_keeps_pedal_until_release(tmp_path):
     song = read_midi(path)
     assert song.notes[0].gate_duration == 0.5
     assert song.notes[0].duration == 1
+
+
+def test_initial_cc64_reset_does_not_disable_automatic_pedal(tmp_path):
+    source = mido.MidiFile()
+    track = mido.MidiTrack()
+    source.tracks.append(track)
+    track.extend(
+        [
+            mido.Message("control_change", control=64, value=0),
+            mido.Message("note_on", note=60, velocity=80),
+            mido.Message("note_off", note=60, velocity=0, time=480),
+        ]
+    )
+    path = tmp_path / "reset.mid"
+    source.save(path)
+    song = read_midi(path)
+    assert song.metadata["cc64_events"] == 1
+    assert interpret(song, pedal_mode="auto").metadata["pedal_origin"] == "Gerado"
+    assert interpret(song, pedal_mode="midi").pedal == []

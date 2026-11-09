@@ -37,7 +37,7 @@ Use `--iscc CAMINHO` se o compilador estiver fora do local padrão. O script exe
 
 ## Publicar uma versão
 
-Atualize `src/tessera_piano/__init__.py`, `pyproject.toml` e o changelog. Execute as verificações e crie uma tag `vVERSÃO`. O workflow de release constrói o instalador e o manifesto.
+Atualize `src/tessera_piano/__init__.py` e o changelog. Execute as verificações e crie uma tag `vVERSÃO`. O pacote e o instalador usam essa definição de versão. O workflow de release constrói o instalador e o manifesto.
 
 A chave Ed25519 privada fica no secret `TESSERA_SIGNING_KEY` do GitHub Actions; somente a chave pública está no aplicativo. A chave precisa corresponder a `update_trust.py`. Não grave chaves privadas no repositório nem nos artefatos. Se o secret não existir, o workflow falha antes de publicar.
 

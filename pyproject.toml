@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=75"]
+requires = ["setuptools==84.2.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "tessera-piano"
-version = "4.0.0"
+dynamic = ["version"]
 description = "Biblioteca MIDI e interpretação musical por teclado para Visual Pianos."
 readme = "README.md"
 requires-python = ">=3.12"
@@ -25,6 +25,9 @@ tessera-piano = "tessera_piano.app:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.dynamic]
+version = {attr = "tessera_piano.__version__"}
 
 [tool.setuptools.package-data]
 tessera_piano = ["ui/*.qml", "resources/**/*"]

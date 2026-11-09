@@ -1,5 +1,5 @@
 #ifndef AppVersion
-  #define AppVersion "4.0.0"
+  #error Use scripts/build.py para informar a versão do aplicativo.
 #endif
 #ifndef BuildDirectory
   #define BuildDirectory "..\dist\TesseraPiano"

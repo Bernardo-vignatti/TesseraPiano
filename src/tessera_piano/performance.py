@@ -140,6 +140,9 @@ def interpret(song, style="natural", intensity=0.55, seed=17, pedal_mode="auto",
         [PedalChange(warp(p.time), p.down) for p in song.pedal],
     )
     explicit = bool(song.pedal or song.metadata.get("cc64_events", 0))
+    resets = song.metadata.get("channel_pedal", [])
+    if resets and all(not event["down"] and event["time"] <= onsets[0] + 0.05 for event in resets):
+        explicit = False
     if pedal_mode == "auto" and not explicit:
         transformed.pedal = auto_pedal(transformed)
         origin = "Gerado"
