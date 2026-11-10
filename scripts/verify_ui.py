@@ -9,7 +9,7 @@ os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 os.environ.setdefault("QT_QUICK_BACKEND", "software")
 os.environ.setdefault("QT_QPA_FONTDIR", str(Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts"))
 
-from PySide6.QtCore import QObject, QPointF, QUrl, Qt, qInstallMessageHandler, QEvent
+from PySide6.QtCore import QObject, QPointF, QTimer, QUrl, Qt, qInstallMessageHandler, QEvent
 from PySide6.QtGui import QFontDatabase
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtQuick import QQuickWindow
@@ -50,10 +50,9 @@ def visual_item(item, name):
             return match
 
 
-def run():
+def exercise(app):
     messages = []
     qInstallMessageHandler(lambda kind, ctx, message: messages.append(message))
-    app = QApplication([])
     QQuickStyle.setStyle("Basic")
     fonts = Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts"
     for name in ("segoeui.ttf", "segoeuib.ttf", "segmdl2.ttf", "georgia.ttf"):
@@ -263,6 +262,25 @@ def run():
     print(
         "PASS: assistente, temas, seletores, menus, diálogos, faixas, bandeja, reprodução e janela compacta."
     )
+
+
+def run():
+    app = QApplication([])
+    app.setQuitOnLastWindowClosed(False)
+    errors = []
+
+    def start():
+        try:
+            exercise(app)
+        except Exception as exc:
+            errors.append(exc)
+        finally:
+            app.quit()
+
+    QTimer.singleShot(0, start)
+    app.exec()
+    if errors:
+        raise errors[0]
 
 
 if __name__ == "__main__":
