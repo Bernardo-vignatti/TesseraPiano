@@ -31,6 +31,7 @@ Verificação em 10/11/2026 sobre `529efbc`: 106 arquivos, 4.354.263 bytes no co
 | Metadados PNG | Sem chunks textuais ou EXIF nos PNGs versionados. Correspondências de e-mail dentro de dados PNG comprimidos foram descartadas como coincidências binárias. |
 | Perfil, cópias antigas, logs, instaladores e ambiente virtual | Não estão versionados. |
 | Atualização | O código contém a chave pública esperada; a chave privada não aparece no histórico analisado. |
+| Proteção no GitHub | Detecção de segredos e proteção de push habilitadas no repositório. |
 
 A análise não encontrou dados pessoais do perfil do aplicativo nem credenciais publicadas. Ela cobre o conteúdo Git acessível e não constitui garantia sobre forks, caches externos ou mudanças futuras. Nenhuma reescrita de histórico é necessária pelos achados atuais.
 
@@ -72,7 +73,7 @@ Menus internos podem usar `Popup.Item` para manter estilo e comportamento previs
 4. **Interação:** animar mudanças de estado; exercitar menus e diálogos reais, foco, cliques rápidos, escalas de 100%, 150% e 200%, bandeja e movimento reduzido.
 5. **Release 4.1.0:** atualizar a definição central de versão e changelog depois da implementação. Rodar lógica, interface, compilação e atualização 4.0.1 → 4.1.0 com recuperação antes da tag pública.
 
-Esta proposta usa a branch `codex/4.1-design-review`, revisão visual `01`. Os commits da proposta não geram instalador nem alteram a release estável. Após avaliação, a implementação parte desta direção e os arquivos de estudo podem ser substituídos pelas capturas e componentes finais.
+Esta proposta usa a branch `codex/4.1-design-review`, revisão visual `01`, tag `design/4.1.0-proposta.1`. Os commits da proposta não geram instalador nem alteram a release estável. Após avaliação, a implementação parte desta direção e os arquivos de estudo podem ser substituídos pelas capturas e componentes finais.
 
 ## Reproduzir a prévia
 
@@ -82,7 +83,7 @@ Na raiz do repositório, com as dependências de desenvolvimento instaladas:
 .venv\Scripts\python docs\design\4.1\render.py
 ```
 
-As duas capturas são feitas pelo Qt a partir de `Preview.qml`. O protótipo usa notas do repertório incluído e estado de demonstração; não carrega perfil pessoal, atualizador ou saída de teclado. Seletores, intensidade e transporte funcionam apenas como demonstração local. Não é uma captura da versão já instalada.
+As duas capturas são feitas pelo Qt a partir de `Preview.qml`. Acrescente `--interactive` para abrir o protótipo. Ele usa notas do repertório incluído e estado de demonstração; não carrega perfil pessoal, atualizador ou saída de teclado. Seletores, intensidade e transporte funcionam apenas como demonstração local. Não é uma captura da versão já instalada.
 
 ## Fontes consultadas
 
