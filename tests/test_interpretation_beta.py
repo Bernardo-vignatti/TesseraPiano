@@ -279,6 +279,36 @@ def test_loop_clips_notes_pedal_and_time():
     assert part.pedal[-1].down is False
 
 
+def test_practice_keeps_the_requested_key_lit_while_waiting(monkeypatch):
+    clock = ClockCancel()
+    clock.cancel_at = 0.15
+    monkeypatch.setattr(playback.time, "perf_counter", lambda: clock.now)
+
+    class Keyboard:
+        def foreground(self):
+            return 123
+
+        def down(self, vk):
+            return False
+
+    class Lamps:
+        def frame(self, colors):
+            frames.append(colors)
+
+    frames = []
+    song = Song(
+        "Prática",
+        [Note("Q", 0, 0.08), Note("t", 0.2, 0.08)],
+        pedal=[PedalChange(0, False), PedalChange(0.1, True)],
+    )
+    config = normalize_settings({"guide_mode": "practice", "guide_latency": 300})
+    with pytest.raises(playback.PlaybackStopped):
+        guide_song(song, 1, Keyboard(), clock, 123, Lamps(), config, lambda *a: None)
+    assert len(frames) > 1
+    expected = {"q": (245, 189, 103), "shift": (245, 189, 103), "space": (160, 100, 185)}
+    assert all(frame == expected for frame in frames)
+
+
 def test_beta_manifest_requires_explicit_channel():
     key = Ed25519PrivateKey.generate()
     manifest = {
@@ -319,6 +349,7 @@ def test_chroma_negotiates_supported_effect_and_returns_session():
             super().__init__()
             self.calls = []
             self.colored = threading.Event()
+            self.color_writes = 0
 
         def request(self, method, url, body=None):
             self.calls.append((method, url, body))
@@ -327,14 +358,16 @@ def test_chroma_negotiates_supported_effect_and_returns_session():
             if body and body.get("effect") == "CHROMA_CUSTOM_KEY":
                 raise OSError("unsupported")
             if body and body.get("param", {}).get("key", [[0]])[2][2] & 255:
-                self.colored.set()
+                self.color_writes += 1
+                if self.color_writes >= 2:
+                    self.colored.set()
             return {}
 
     sdk = SDK()
     with sdk:
         assert sdk.effect == "CHROMA_CUSTOM2"
         sdk.frame({"q": (255, 0, 0)})
-        assert sdk.colored.wait(1)
+        assert sdk.colored.wait(3)
     assert sdk.calls[-1][0] == "DELETE"
     assert not sdk.thread.is_alive()
 

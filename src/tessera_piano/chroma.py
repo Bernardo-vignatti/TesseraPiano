@@ -125,18 +125,20 @@ class Chroma:
             sent = None
             while True:
                 with self.condition:
+                    self.condition.wait(0.033)
                     if self.closed:
                         break
                     colors = self.pending
-                    self.condition.wait(0.033)
-                if colors != sent:
+                refresh = time.monotonic() - heartbeat >= 1
+                # No modo Praticar, o mesmo quadro pode ficar ativo até o músico responder.
+                if colors != sent or (colors and refresh):
                     self.request(
                         "PUT",
                         self.uri + "/keyboard",
                         {"effect": self.effect, "param": self.parameters(colors, self.effect)},
                     )
                     sent = colors
-                if time.monotonic() - heartbeat >= 1:
+                if refresh:
                     self.request("PUT", self.uri + "/heartbeat")
                     heartbeat = time.monotonic()
         except Exception as exc:

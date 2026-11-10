@@ -1,5 +1,10 @@
 # Alterações
 
+## 4.2.0-beta.2
+
+- Praticar mantém a tecla esperada e seus modificadores acesos enquanto aguarda o toque. A compensação de atraso fica restrita ao modo Acompanhar.
+- A sessão Chroma reaplica a iluminação enquanto aguarda, mesmo quando a tecla esperada continua a mesma.
+
 ## 4.2.0-beta.1
 
 - Análise de andamento, frases e harmonia; perfis Contido, Cantabile e Rítmico com interpretação salva por música.

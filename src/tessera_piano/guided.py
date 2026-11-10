@@ -212,11 +212,12 @@ def guide_song(song, speed, keyboard, cancel, target, chroma, config, progress, 
                 hits += len(confirmed)
                 misses += len(expected) - len(confirmed)
         if now >= next_frame:
-            light_position = position + config.get("guide_latency", 0) / 1000 * speed
-            visual_index = (
-                index if practice else max(0, bisect_right(sequence_times, light_position) - 1)
-            )
-            if not practice:
+            if practice:
+                light_position = position
+                active, following, phase = expected, [], 0
+            else:
+                light_position = position + config.get("guide_latency", 0) / 1000 * speed
+                visual_index = max(0, bisect_right(sequence_times, light_position) - 1)
                 while (
                     visual_cursor < len(ordered) and ordered[visual_cursor].start <= light_position
                 ):
@@ -227,25 +228,16 @@ def guide_song(song, speed, keyboard, cancel, target, chroma, config, progress, 
                     for n in visual_active
                     if n.start + (n.gate_duration or n.duration) > light_position
                 ]
-            active = expected if practice else visual_active
-            following = sequence[visual_index + 1] if visual_index + 1 < len(sequence) else []
-            if (
-                not practice
-                and following
-                and following[0].start - light_position > config["guide_lead"] / 1000 * speed
-            ):
-                following = []
+                active = visual_active
+                following = sequence[visual_index + 1] if visual_index + 1 < len(sequence) else []
+                if following and (
+                    following[0].start - light_position > config["guide_lead"] / 1000 * speed
+                ):
+                    following = []
+                phase = (light_position - sequence[visual_index][0].start) / speed
             pedal_i = bisect_right(pedal_times, light_position) - 1
             pedal = song.pedal[pedal_i].down if pedal_i >= 0 else None
-            chroma.frame(
-                lights(
-                    active,
-                    following,
-                    pedal,
-                    (light_position - sequence[visual_index][0].start) / speed,
-                    config["guide_palette"],
-                )
-            )
+            chroma.frame(lights(active, following, pedal, phase, config["guide_palette"]))
             progress(
                 position,
                 {

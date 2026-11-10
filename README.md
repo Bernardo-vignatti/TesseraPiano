@@ -8,7 +8,7 @@ Biblioteca de músicas e interpretação por teclado para [Visual Pianos](https:
 
 Baixe o instalador na página de [Releases](https://github.com/Bernardo-vignatti/TesseraPiano/releases/latest). Python e as bibliotecas necessárias já acompanham o aplicativo.
 
-A branch principal também contém a [beta 4.2](https://github.com/Bernardo-vignatti/TesseraPiano/releases/tag/v4.2.0-beta.1), com interpretação local e orientação Chroma descritas abaixo. A 4.1.1 permanece no canal estável.
+A [beta 4.2](https://github.com/Bernardo-vignatti/TesseraPiano/releases/tag/v4.2.0-beta.2) inclui a interpretação local e a orientação Chroma descritas abaixo. A 4.1.1 permanece no canal estável.
 
 Na [primeira abertura](docs/images/setup.png), configure aparência, alcance do piano, interpretação e bandeja. Você também pode começar com os padrões e voltar ao assistente nas configurações.
 
