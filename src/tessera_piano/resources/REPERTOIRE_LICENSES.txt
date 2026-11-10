@@ -1,11 +1,12 @@
-FONTES E LICENÇAS DO REPERTÓRIO — Piano Automático 2.0
+FONTES E LICENÇAS DO REPERTÓRIO — Tessera Piano
 
 Conversões feitas a partir dos MIDIs das edições de piano do Mutopia Project,
 baixados do espelho oficial ibiblio. Não são transcrições inventadas de memória.
-Os arquivos originais MIDI e LilyPond acompanham esta pasta.
+Os arquivos originais MIDI e LilyPond estão em repertoire no repositório público:
+https://github.com/Bernardo-vignatti/TesseraPiano/tree/main/repertoire
 
 Conversão: leitura de note-on/note-off, alterações de tempo e CC64; mapeamento
-para as 61 notas do piano da imagem. Notas fora da faixa foram deslocadas
+para as 61 notas do piano. Notas fora da faixa foram deslocadas
 por oitavas. Durante a execução, sobreposições na mesma tecla física são
 rearticuladas; as demais notas mantêm durações independentes.
 Somente o tempo que existe no MIDI é preservado: indicações impressas sem

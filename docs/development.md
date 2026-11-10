@@ -6,6 +6,10 @@
 
 `tests` cobre lógica e compatibilidade. `scripts/verify_ui.py` exercita a interface real com saída de teclado simulada. `packaging` contém o lançador, o instalador e textos de licença.
 
+`repertoire` guarda as fontes MIDI/LilyPond e seus créditos, separadas dos recursos usados pelo aplicativo. Matrizes de arte, instaladores e relatórios locais ficam fora do Git. O ícone ICO contém os tamanhos de 16 a 256 px; somente o PNG usado pela interface acompanha o pacote.
+
+O CI verifica o histórico com Gitleaks. A única exceção em `.gitleaksignore` corresponde ao mapa literal de teclas, revisado no commit inicial. Não são ignorados arquivos inteiros nem regras de credenciais. A auditoria anterior à 4.1 não encontrou credenciais ou dados pessoais do perfil no conteúdo público.
+
 ## Verificações
 
 Na raiz, com as dependências do README instaladas:

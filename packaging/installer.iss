@@ -25,6 +25,7 @@ UninstallDisplayIcon={app}\TesseraPiano.exe
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
+WizardImageFile=assets\installer-side.bmp
 DisableProgramGroupPage=yes
 LicenseFile=..\LICENSE
 AppMutex=Local\Vignatti.TesseraPiano

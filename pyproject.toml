@@ -30,7 +30,7 @@ where = ["src"]
 version = {attr = "tessera_piano.__version__"}
 
 [tool.setuptools.package-data]
-tessera_piano = ["ui/*.qml", "resources/**/*"]
+tessera_piano = ["ui/*.qml", "ui/qmldir", "resources/**/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
