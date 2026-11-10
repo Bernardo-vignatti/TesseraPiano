@@ -36,7 +36,7 @@ def main():
         },
     }
     manifest["signature"] = base64.b64encode(key.sign(canonical_manifest(manifest))).decode()
-    verify_manifest(manifest)
+    verify_manifest(manifest, allow_prerelease=True)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     args.installer.with_suffix(".exe.sha256").write_text(

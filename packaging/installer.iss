@@ -8,6 +8,9 @@
 AppId={{8ED65A63-FF38-4B82-9DE9-21162E345B88}
 AppName=Tessera Piano
 AppVersion={#AppVersion}
+VersionInfoVersion={#AppFileVersion}
+VersionInfoProductVersion={#AppFileVersion}
+VersionInfoProductTextVersion={#AppVersion}
 AppPublisher=Vignatti
 AppPublisherURL=https://github.com/Bernardo-vignatti/TesseraPiano
 AppSupportURL=https://github.com/Bernardo-vignatti/TesseraPiano/issues

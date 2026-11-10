@@ -6,6 +6,7 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
+from packaging.version import Version
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -102,6 +103,8 @@ def main():
         [
             str(args.iscc),
             f"/DAppVersion={__version__}",
+            "/DAppFileVersion="
+            + ".".join(str(n) for n in (Version(__version__).release + (0, 0, 0, 0))[:4]),
             f"/DBuildDirectory={distribution}",
             str(ROOT / "packaging/installer.iss"),
         ],

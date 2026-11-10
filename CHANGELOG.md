@@ -1,5 +1,18 @@
 # Alterações
 
+## 4.2.0-beta.1
+
+- Análise de andamento, frases e harmonia; perfis Contido, Cantabile e Rítmico com interpretação salva por música.
+- Motor opcional Pianist Transformer em CPU, executado offline em processo separado. Pacote autenticado, progresso, cancelamento e alternativa explícita por regras.
+- Pedal automático considera contexto harmônico, articulação e pausas. Eventos MIDI intencionais continuam preservados no modo Apenas MIDI.
+- Modo guiado Razer Chroma: acompanhar o ritmo ou praticar aguardando as teclas e o pedal corretos, sem injetar comandos.
+- Calibração de iluminação, modificadores, antecedência, brilho, paletas, compensação de atraso e mapa físico ajustável.
+- Verificação de combinações incompatíveis, melodia simplificada e repetição de trechos A/B.
+- F8 encerra com uma curta desaceleração e liberação das notas e do pedal. Segundo F8, Esc e perda de foco interrompem imediatamente.
+- Canal Beta separado do Estável; a versão 4.1.1 continua disponível para quem usa o canal estável.
+
+O motor é experimental: download adicional de aproximadamente 480 MiB, cerca de 1,6 GiB instalados. A primeira preparação ocorre antes de tocar e pode levar minutos em músicas longas; resultados válidos são reutilizados. O teclado comum não oferece intensidade de ataque nem meio pedal no jogo. A sequência de LEDs foi confirmada em um Cynosa Chroma; outros modelos dependem da compatibilidade com a API e da calibração física.
+
 ## 4.1.1
 
 - Nova identidade visual com grafite, marfim, iluminação âmbar e teclado com profundidade, nos temas claro e escuro.

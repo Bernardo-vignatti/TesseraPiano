@@ -41,4 +41,4 @@ jobs:
       - name: Preparar release em rascunho
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$env:GITHUB_REF_NAME" dist/TesseraPiano-Setup-*-x64.exe dist/update.json dist/*.sha256 --title "Tessera Piano $env:GITHUB_REF_NAME" --notes-file dist/release-notes.md --verify-tag --draft
+        run: gh release create "$env:GITHUB_REF_NAME" dist/TesseraPiano-Setup-*-x64.exe dist/update.json dist/*.sha256 --title "Tessera Piano $env:GITHUB_REF_NAME" --notes-file dist/release-notes.md --verify-tag --draft --prerelease=${{ contains(github.ref_name, '-') }}
