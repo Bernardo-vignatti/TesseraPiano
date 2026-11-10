@@ -1,6 +1,6 @@
 # Alterações
 
-## 4.1.0
+## 4.1.1
 
 - Nova identidade visual com grafite, marfim, iluminação âmbar e teclado com profundidade, nos temas claro e escuro.
 - Painel de interpretação lateral que recolhe em janelas menores; biblioteca e primeiro uso seguem o mesmo padrão.
@@ -9,6 +9,10 @@
 - Menu da bandeja acompanha o tema e habilita reprodução e parada conforme o estado do aplicativo.
 - Fontes musicais e recursos de instalação separados do pacote; arte e ícones redundantes removidos. Créditos preservados.
 - Verificação de segredos no histórico pelo CI. Atualizações removem recursos obsoletos da instalação anterior.
+
+## 4.1.0
+
+Candidata não distribuída, substituída pela 4.1.1.
 
 ## 4.0.1
 
