@@ -35,6 +35,8 @@ jobs:
       - run: ruff check src tests scripts packaging
       - run: ruff format --check src tests scripts packaging
       - run: python scripts/verify_ui.py
+        env:
+          TESSERA_TEST_REDUCED_MOTION: '1'
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

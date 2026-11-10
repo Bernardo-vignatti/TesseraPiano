@@ -7,12 +7,21 @@ import time
 
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
 os.environ.setdefault("QT_QUICK_BACKEND", "software")
+os.environ.setdefault("QSG_RENDER_LOOP", "basic")
 os.environ.setdefault("QT_QPA_FONTDIR", str(Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts"))
 
-from PySide6.QtCore import QObject, QPointF, QTimer, QUrl, Qt, qInstallMessageHandler, QEvent
+from PySide6.QtCore import (
+    QObject,
+    QPointF,
+    QTimer,
+    QUrl,
+    Qt,
+    qInstallMessageHandler,
+    QEvent,
+    QEventLoop,
+)
 from PySide6.QtGui import QFontDatabase
 from PySide6.QtQml import QQmlApplicationEngine
-from PySide6.QtQuick import QQuickWindow
 from PySide6.QtQuickControls2 import QQuickStyle
 from PySide6.QtTest import QTest
 from PySide6.QtWidgets import QApplication
@@ -22,14 +31,16 @@ from tessera_piano.music import Song, Note
 from tessera_piano.storage import Profile
 
 
+def pause(milliseconds):
+    loop = QEventLoop()
+    QTimer.singleShot(milliseconds, loop.quit)
+    loop.exec()
+
+
 def wait_for(predicate, timeout=5):
     deadline = time.monotonic() + timeout
     while not predicate() and time.monotonic() < deadline:
-        # A plataforma offscreen só avança algumas transições após desenhar um frame.
-        for window in QApplication.allWindows():
-            if isinstance(window, QQuickWindow) and window.isVisible():
-                window.grabWindow()
-        QTest.qWait(25)
+        pause(25)
     assert predicate()
 
 
@@ -62,6 +73,7 @@ def exercise(app):
     output.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as folder:
         profile = Profile(BASE / "resources/music", folder)
+        profile.config["reduced_motion"] = os.environ.get("TESSERA_TEST_REDUCED_MOTION") == "1"
         controller = Controller(profile, preview=True)
         engine = QQmlApplicationEngine()
         engine.rootContext().setContextProperty("backend", controller)
@@ -74,7 +86,7 @@ def exercise(app):
             window.requestActivate()
             assert QTest.qWaitForWindowExposed(window, 3000)
         window.grabWindow()
-        QTest.qWait(400)
+        pause(400)
         wizard = window.findChild(QObject, "setupWizard")
         assert wizard, messages
         try:
@@ -99,7 +111,7 @@ def exercise(app):
                 window.grabWindow().save(str(output / f"setup-{step}.png"))
             point = button.mapToScene(QPointF(button.width() / 2, button.height() / 2)).toPoint()
             QTest.mouseClick(window, Qt.LeftButton, Qt.NoModifier, point)
-            QTest.qWait(220)
+            pause(220)
         assert profile.config["onboarding_completed"]
         assert not wizard.property("opened")
         window.findChild(QObject, "notification").close()
@@ -107,9 +119,9 @@ def exercise(app):
             controller.setSetting("theme", theme)
             for page, label in ((0, "library"), (1, "player"), (2, "settings"), (3, "help")):
                 window.setProperty("page", page)
-                QTest.qWait(230)
+                pause(230)
                 wait_for(lambda: window.findChild(QObject, "pages").property("opacity") > 0.999)
-                QTest.qWait(150)
+                pause(150)
                 assert window.grabWindow().save(str(output / f"{label}-{theme}.png"))
         source = Path(folder) / "Importação.piano.json"
         source.write_text(
@@ -123,12 +135,12 @@ def exercise(app):
         controller.importPaths([str(source)])
         deadline = time.monotonic() + 5
         while controller.importing or controller.preparing:
-            QTest.qWait(30)
+            pause(30)
             assert time.monotonic() < deadline
         assert controller.current.personal
         controller.setSetting("theme", "dark")
         window.setProperty("page", 1)
-        QTest.qWait(250)
+        pause(250)
         wait_for(lambda: window.findChild(QObject, "pages").property("opacity") > 0.999)
         choice = visual_item(window.contentItem(), "performanceChoice")
         click(window, choice)
@@ -197,16 +209,16 @@ def exercise(app):
         controller.undoDelete()
         assert controller.current.ident == ident
         while controller.preparing:
-            QTest.qWait(30)
+            pause(30)
         controller.setSetting("countdown", 1)
         controller.start()
-        QTest.qWait(1150)
+        pause(1150)
         assert controller.status == "playing"
         if controller.tray:
             assert not controller.tray_play.isEnabled()
             assert controller.tray_stop.isEnabled()
         controller.stop()
-        QTest.qWait(150)
+        pause(150)
         assert controller.status == "idle"
         assert not controller.keyboard.note_labels
         if controller.tray:
@@ -216,7 +228,7 @@ def exercise(app):
             controller.tray_menu.grab().save(str(output / "tray.png"))
         window.findChild(QObject, "notification").close()
         window.setProperty("page", 2)
-        QTest.qWait(400)
+        pause(400)
         speed = window.findChild(QObject, "speedSpin")
         click(window, speed, speed.width() - 16, speed.height() / 2)
         assert controller.settings["speed"] == 105
@@ -226,7 +238,7 @@ def exercise(app):
         for width, height in ((1040, 720), (1600, 1000)):
             window.resize(width, height)
             window.setProperty("page", 1)
-            QTest.qWait(100)
+            pause(100)
             window.grabWindow().save(str(output / f"player-{width}.png"))
             if width == 1040:
                 click(window, window.findChild(QObject, "interpretationButton"))

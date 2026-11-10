@@ -27,6 +27,8 @@ O teste de interface percorre o assistente, temas, menus, diálogos, seletores, 
 .venv\Scripts\python -m tessera_piano --preview --profile .local\preview-profile
 ```
 
+No CI, `TESSERA_TEST_REDUCED_MOTION=1` exercita os controles com movimento reduzido, evitando depender da sincronização de quadros de um servidor sem tela. A execução local mantém as transições para conferir as animações no desktop.
+
 O caminho normal, sem `--preview`, envia entradas apenas após o usuário iniciar e selecionar o Roblox. Qualidade sonora, mapeamento e pedal devem ser conferidos no instrumento do jogo; testes simulados não verificam o áudio recebido.
 
 ## Compilar

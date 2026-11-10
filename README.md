@@ -8,7 +8,7 @@ Biblioteca de músicas e interpretação por teclado para [Visual Pianos](https:
 
 Baixe o instalador na página de [Releases](https://github.com/Bernardo-vignatti/TesseraPiano/releases/latest). Python e as bibliotecas necessárias já acompanham o aplicativo.
 
-Na primeira abertura, configure aparência, alcance do piano, interpretação e bandeja. Você também pode começar com os padrões e voltar ao assistente nas configurações.
+Na [primeira abertura](docs/images/setup.png), configure aparência, alcance do piano, interpretação e bandeja. Você também pode começar com os padrões e voltar ao assistente nas configurações.
 
 ## Como tocar
 
