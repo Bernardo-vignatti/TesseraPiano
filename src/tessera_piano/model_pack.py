@@ -208,7 +208,7 @@ def apply_render(song, source, result, intensity):
         ):
             raise ValueError("A interpretação contém tempos inválidos.")
         predicted_start = source[0].start + (row["start"] - first) * scale
-        start = note.start + (predicted_start - note.start) * intensity
+        start = max(0, note.start + (predicted_start - note.start) * intensity)
         gate = (note.gate_duration or note.duration) * (1 - intensity) + row[
             "gate"
         ] * scale * intensity

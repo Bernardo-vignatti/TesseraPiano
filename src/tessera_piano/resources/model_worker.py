@@ -29,17 +29,25 @@ def main():
     ).eval()
     midi = MidiFile(ticks_per_beat=1000)
     midi.tempo_changes = [TempoChange(120, 0)]
-    # 120 BPM: 2000 ticks por segundo; sem quantizar a execução de origem.
+    # A representação do modelo usa milissegundos. As identidades de origem ficam separadas.
     instrument = Instrument(program=0)
     notes = request["notes"]
+    unique = {}
+    identities = []
+    for note in notes:
+        key = (round(note["start"] * 1000), note["pitch"])
+        identities.append(key)
+        if key not in unique or note["gate"] > unique[key]["gate"]:
+            unique[key] = note
+    order = sorted(unique)
     instrument.notes = [
         Note(
-            velocity=n["velocity"],
-            pitch=n["pitch"],
-            start=round(n["start"] * 2000),
-            end=round((n["start"] + n["gate"]) * 2000),
+            velocity=unique[key]["velocity"],
+            pitch=key[1],
+            start=key[0] * 2,
+            end=key[0] * 2 + max(2, round(unique[key]["gate"] * 2000)),
         )
-        for n in notes
+        for key in order
     ]
     midi.instruments = [instrument]
     midi.max_tick = max(n.end for n in instrument.notes) + 1
@@ -51,7 +59,9 @@ def main():
         result, _ = batch_performance_render(
             model, [midi], device="cpu", progress_callback=progress
         )
-    generated = sorted(result[0].instruments[0].notes, key=lambda n: (n.start, n.pitch))
+    generated = result[0].instruments[0].notes
+    if len(generated) != len(order) or any(n.pitch != key[1] for n, key in zip(generated, order)):
+        raise ValueError("O modelo não preservou as notas de entrada.")
     times = result[0].get_tick_to_time_mapping()
     pedal = result[0].instruments[0].control_changes
 
@@ -77,16 +87,17 @@ def main():
     memory_info = ctypes.WinDLL("psapi").GetProcessMemoryInfo
     memory_info.argtypes = [ctypes.c_void_p, ctypes.c_void_p, ctypes.c_ulong]
     memory_info(current(), ctypes.byref(counters), counters.cb)
+    generated_rows = {
+        key: {
+            "pitch": n.pitch,
+            "start": float(times[n.start]),
+            "gate": max(0.005, float(times[n.end] - times[n.start])),
+            "velocity": n.velocity,
+        }
+        for key, n in zip(order, generated)
+    }
     payload = {
-        "notes": [
-            {
-                "pitch": n.pitch,
-                "start": float(times[n.start]),
-                "gate": float(times[n.end] - times[n.start]),
-                "velocity": n.velocity,
-            }
-            for n in generated
-        ],
+        "notes": [generated_rows[key] for key in identities],
         "pedal": [
             {"time": float(times[p.time]), "value": p.value} for p in pedal if p.number == 64
         ],

@@ -6,19 +6,8 @@ from itertools import groupby
 import math
 import random
 
-from .keymap import KEY_TO_MIDI
-from .analysis import TempoMap, analyze
+from .analysis import TempoMap, analyze, pitch
 from .music import PedalChange, Song, prepare_keyboard
-
-
-def pitch(note):
-    return note.pitch if note.pitch is not None else KEY_TO_MIDI[note.key]
-
-
-def beat_length(song):
-    tempos = song.metadata.get("tempo_map", [])
-    fallback = 60 / max(40, min(240, float(song.metadata.get("bpm_reference", 120))))
-    return max(0.2, min(1.5, tempos[0]["tempo"] / 1_000_000 if tempos else fallback))
 
 
 def auto_pedal(song):

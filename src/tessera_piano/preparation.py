@@ -13,7 +13,7 @@ from .performance import interpret
 from .storage import atomic_text
 from .guided import manual_song
 
-CACHE_VERSION = 1
+CACHE_VERSION = 2
 
 
 def prepare(song, config, directory, cancel, progress=lambda value: None):

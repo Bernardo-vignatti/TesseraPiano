@@ -23,4 +23,3 @@ PyInstaller e Inno Setup são ferramentas de construção; seus termos e exceç�
 O pacote separado usa [Pianist Transformer](https://github.com/yhj137/PianistTransformer), de Hong-Jie You e colaboradores, e os pesos [pianist-transformer-rendering](https://huggingface.co/yhj137/pianist-transformer-rendering), ambos declarados sob Apache-2.0. Código fixado em `747df2d12291e37f6638b39f1b71517e579ad48c`; pesos em `8f1568201d1ec035c73939d5a67c5168c0b80221`. Consulte a licença e `NOTICE.txt` no pacote. Referência: *Pianist Transformer: Towards Expressive Piano Performance Rendering via Scalable Self-Supervised Pre-Training*, ICML 2026, [arXiv:2512.02652](https://arxiv.org/abs/2512.02652).
 
 Python e as dependências do runtime mantêm suas licenças no pacote. O código próprio de integração do Tessera permanece MIT. O Chroma usa a API REST do serviço Razer instalado pelo usuário; DLLs e software da Razer não são redistribuídos.
-
