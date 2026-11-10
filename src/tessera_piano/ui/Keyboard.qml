@@ -22,12 +22,17 @@ Item {
         Rectangle {
             required property int index
             required property var modelData
-            x: index * piano.unit + 1
-            width: piano.unit - 2
+            readonly property bool sounding: piano.activeNotes.indexOf(modelData) >= 0
+            x: index * piano.unit + .5
+            width: piano.unit - 1
             height: piano.height
             radius: 3
-            color: piano.activeNotes.indexOf(modelData) >= 0 ? Theme.accentFill : (Theme.light ? "#fffefa" : "#e8e4db")
-            Behavior on color { ColorAnimation { duration: Theme.reduced ? 0 : 65 } }
+            gradient: Gradient {
+                GradientStop { position: 0; color: sounding ? "#d1ac73" : "#b9c3c1" }
+                GradientStop { position: .16; color: sounding ? "#e4c48f" : "#ecece3"; Behavior on color { ColorAnimation { duration: Theme.reduced ? 0 : 65 } } }
+                GradientStop { position: .92; color: sounding ? "#e4bb7c" : "#dbddd5" }
+                GradientStop { position: 1; color: sounding ? "#9f7950" : "#909c99" }
+            }
             Text {
                 visible: modelData % 12 === 0
                 anchors.bottom: parent.bottom; anchors.bottomMargin: 10; anchors.horizontalCenter: parent.horizontalCenter
@@ -44,9 +49,15 @@ Item {
             width: piano.unit * .6
             height: piano.height * .63
             radius: 3
-            color: piano.activeNotes.indexOf(modelData) >= 0 ? "#ba8849" : "#17191d"
-            border.color: "#33353a"
-            Behavior on color { ColorAnimation { duration: Theme.reduced ? 0 : 65 } }
+            readonly property bool sounding: piano.activeNotes.indexOf(modelData) >= 0
+            gradient: Gradient {
+                GradientStop { position: 0; color: sounding ? "#bc965d" : "#3e4b50" }
+                GradientStop { position: .1; color: sounding ? "#9d7640" : "#253039" }
+                GradientStop { position: .87; color: sounding ? "#a98046" : "#10191f"; Behavior on color { ColorAnimation { duration: Theme.reduced ? 0 : 65 } } }
+                GradientStop { position: 1; color: sounding ? "#80603a" : "#354149" }
+            }
+            border.color: "#111a20"
+            Rectangle { x: 2; y: 3; width: parent.width - 4; height: 1; color: "#677477"; opacity: .5 }
         }
     }
 }

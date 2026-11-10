@@ -6,6 +6,7 @@ Switch {
     implicitHeight: 36
     font.family: Theme.font
     font.pixelSize: 13
+    opacity: enabled ? 1 : .4
     indicator: Rectangle {
         implicitWidth: 36
         implicitHeight: 21

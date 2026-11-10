@@ -9,6 +9,7 @@ import winreg
 
 from tessera_piano import __version__
 from tessera_piano.controller import BASE
+from tessera_piano.music import Song, Note
 
 
 def execute(command, timeout=180):
@@ -57,6 +58,10 @@ def main():
             '{"layout":"88","favorites":["preserved"],"theme":"light"}', encoding="utf-8"
         )
         original = preferences.read_bytes()
+        music = profile / "musicas" / "preservada.piano.json"
+        music.parent.mkdir()
+        music.write_text(Song("Preservada", [Note("t", 0, 1)]).to_text(), encoding="utf-8")
+        original_music = music.read_bytes()
         execute(
             [
                 args.baseline.resolve(),
@@ -107,17 +112,24 @@ def main():
         restored = health(executable, root / "health-restored.json")
         assert restored["version"] == baseline["version"], restored
         assert preferences.read_bytes() == original
+        assert music.read_bytes() == original_music
         assert registration() == registration_before
         apply(__version__)
         updated = health(executable, root / "health-after.json")
         assert updated["ok"] and updated["version"] == __version__, updated
         assert preferences.read_bytes() == original
+        assert music.read_bytes() == original_music
+        resources = installation / "_internal/tessera_piano/resources"
+        assert not (resources / "sources").exists()
+        assert not (resources / "icons/tessera-master.png").exists()
         result = {
             "baseline": baseline["version"],
             "updated": updated["version"],
             "installation": True,
             "rollback": True,
             "preferences_preserved": True,
+            "music_preserved": True,
+            "obsolete_resources_removed": True,
         }
         (workspace / "installation-report.json").write_text(
             json.dumps(result, indent=2), encoding="utf-8"

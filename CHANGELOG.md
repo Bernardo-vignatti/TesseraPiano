@@ -1,5 +1,15 @@
 # Alterações
 
+## 4.1.0
+
+- Nova identidade visual com grafite, marfim, iluminação âmbar e teclado com profundidade, nos temas claro e escuro.
+- Painel de interpretação lateral que recolhe em janelas menores; biblioteca e primeiro uso seguem o mesmo padrão.
+- Menus, seletores, campos, diálogos e controles padronizados, com transições suaves e redução de movimento.
+- Correções de foco e navegação por teclado; seleção de faixas mantém pelo menos uma faixa ativa.
+- Menu da bandeja acompanha o tema e habilita reprodução e parada conforme o estado do aplicativo.
+- Fontes musicais e recursos de instalação separados do pacote; arte e ícones redundantes removidos. Créditos preservados.
+- Verificação de segredos no histórico pelo CI. Atualizações removem recursos obsoletos da instalação anterior.
+
 ## 4.0.1
 
 - O pedal automático reconhece MIDIs com apenas um reset CC64 inicial e gera sustentação para esses arquivos.

@@ -10,8 +10,10 @@ Button {
     property bool selected: false
     property bool leftAligned: false
     implicitHeight: compact ? 34 : 42
-    implicitWidth: Math.max(compact ? 36 : 42, label.implicitWidth + (glyph ? 54 : 28))
+    implicitWidth: text.length === 0 ? (compact ? 36 : 42) : Math.max(compact ? 36 : 42, label.implicitWidth + (glyph ? 54 : 28))
     hoverEnabled: true
+    scale: down ? .975 : 1
+    Behavior on scale { NumberAnimation { duration: Theme.fast; easing.type: Easing.OutCubic } }
     opacity: enabled ? 1 : 0.4
     font.family: Theme.font
     font.pixelSize: 13
@@ -21,7 +23,8 @@ Button {
         Text {
             visible: control.glyph.length > 0
             text: control.glyph
-            anchors.left: parent.left
+            anchors.left: control.text.length ? parent.left : undefined
+            anchors.horizontalCenter: control.text.length ? undefined : parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             font.family: "Segoe MDL2 Assets"
             font.pixelSize: 15
@@ -42,12 +45,11 @@ Button {
         }
     }
     background: Rectangle {
-        radius: 7
+        radius: 9
         color: control.primary ? (control.down ? "#cda568" : control.hovered ? "#eccc98" : Theme.accentFill) : control.selected ? Theme.accentTint : (control.down || control.hovered ? Theme.hover : control.flat ? "transparent" : Theme.surface)
         border.width: control.primary || control.flat && !control.activeFocus ? 0 : 1
         border.color: control.activeFocus ? Theme.accent : Theme.line
-        Behavior on color { ColorAnimation { duration: Theme.motion } }
+        Behavior on color { ColorAnimation { duration: Theme.fast } }
     }
-    ToolTip.visible: hovered && text.length === 0 && Accessible.name.length > 0
-    ToolTip.text: Accessible.name
+    TToolTip { visible: control.hovered && control.text.length === 0 && control.Accessible.name.length > 0; text: control.Accessible.name }
 }

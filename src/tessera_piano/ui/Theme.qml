@@ -4,19 +4,24 @@ import QtQuick
 QtObject {
     property bool light: false
     property bool reduced: false
-    readonly property color bg: light ? "#f5f3ef" : "#1b1d20"
-    readonly property color side: light ? "#eeece6" : "#141619"
-    readonly property color surface: light ? "#ffffff" : "#23262a"
-    readonly property color hover: light ? "#e9e6df" : "#2d3035"
-    readonly property color line: light ? "#dcd8d0" : "#35383d"
-    readonly property color text: light ? "#252629" : "#f3f0e9"
-    readonly property color muted: light ? "#686b70" : "#a2a4aa"
-    readonly property color faint: light ? "#87898e" : "#747981"
-    readonly property color accent: light ? "#88602a" : "#e0b979"
-    readonly property color accentFill: "#e0b979"
-    readonly property color accentTint: light ? "#ede4d5" : "#373126"
-    readonly property color green: light ? "#25705a" : "#8cceae"
+    readonly property color bg: light ? "#f1eee6" : "#171d21"
+    readonly property color backdrop: light ? "#dedbd0" : "#303a3e"
+    readonly property color side: light ? "#e8e5dc" : "#151b1f"
+    readonly property color surface: light ? "#faf8f1" : "#222c30"
+    readonly property color surfaceTop: light ? "#fffdf8" : "#303b3f"
+    readonly property color hover: light ? "#e6e1d4" : "#344145"
+    readonly property color line: light ? "#d2ccbf" : "#3b484c"
+    readonly property color text: light ? "#293431" : "#f0eee7"
+    readonly property color muted: light ? "#596962" : "#a4b3b0"
+    readonly property color faint: light ? "#68756e" : "#8b9c9c"
+    readonly property color accent: light ? "#79501e" : "#e7bb7e"
+    readonly property color accentFill: "#e7bb7e"
+    readonly property color accentTint: light ? "#ebe0cb" : "#393930"
+    readonly property color green: light ? "#2b6a50" : "#95b8a5"
     readonly property color danger: light ? "#af4244" : "#eda3a0"
     readonly property string font: "Segoe UI"
+    readonly property string titleFont: "Georgia"
     readonly property int motion: reduced ? 0 : 160
+    readonly property int fast: reduced ? 0 : 120
+    readonly property int pageMotion: reduced ? 0 : 220
 }

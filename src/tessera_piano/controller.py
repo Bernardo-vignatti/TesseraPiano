@@ -8,7 +8,7 @@ import threading
 import time
 
 from PySide6.QtCore import QObject, Property, QTimer, QUrl, Signal, Slot, Qt
-from PySide6.QtGui import QDesktopServices, QIcon, QGuiApplication
+from PySide6.QtGui import QDesktopServices, QFont, QIcon, QGuiApplication
 from PySide6.QtWidgets import QApplication, QFileDialog, QMenu, QSystemTrayIcon
 
 from . import __version__
@@ -75,6 +75,9 @@ class Controller(QObject):
         self.tray = None
         QGuiApplication.styleHints().colorSchemeChanged.connect(self.settingsChanged)
         self.create_tray()
+        self.settingsChanged.connect(self.refresh_tray)
+        self.playbackChanged.connect(self.refresh_tray)
+        self.songChanged.connect(self.refresh_tray)
         if profile.items:
             self.selectSong(
                 next(
@@ -678,11 +681,14 @@ class Controller(QObject):
         menu = QMenu()
         menu.addAction("Abrir Tessera Piano", self.show_window)
         menu.addSeparator()
-        menu.addAction("Reproduzir · F6", self.start)
-        menu.addAction("Parar · F8", self.stop)
+        self.tray_play = menu.addAction("Reproduzir · F6", self.start)
+        self.tray_stop = menu.addAction("Parar · F8", self.stop)
         menu.addSeparator()
         menu.addAction("Sair", self.quit)
         self.tray_menu = menu
+        menu.setFont(QFont("Segoe UI", 10))
+        menu.aboutToShow.connect(self.refresh_tray)
+        self.refresh_tray()
         self.tray.setContextMenu(menu)
         self.tray.activated.connect(
             lambda reason: (
@@ -692,6 +698,31 @@ class Controller(QObject):
             )
         )
         self.tray.show()
+
+    def refresh_tray(self):
+        if not self.tray:
+            return
+        busy = self.status != "idle"
+        self.tray_play.setEnabled(not busy and not self.preparing and self.prepared is not None)
+        self.tray_stop.setEnabled(busy)
+        light = self.settings["theme"] == "light" or (
+            self.settings["theme"] == "system" and self.systemLight
+        )
+        if getattr(self, "tray_light", None) == light:
+            return
+        self.tray_light = light
+        bg, text, line, hover, muted = (
+            ("#faf8f1", "#293431", "#d2ccbf", "#e6e1d4", "#68756e")
+            if light
+            else ("#222c30", "#f0eee7", "#3b484c", "#344145", "#8b9c9c")
+        )
+        self.tray_menu.setStyleSheet(
+            f"QMenu {{ background: {bg}; color: {text}; border: 1px solid {line}; padding: 6px; }}"
+            "QMenu::item { padding: 10px 20px; border-radius: 6px; }"
+            f"QMenu::item:selected {{ background: {hover}; }}"
+            f"QMenu::item:disabled {{ color: {muted}; }}"
+            f"QMenu::separator {{ height: 1px; background: {line}; margin: 5px 10px; }}"
+        )
 
     @Slot()
     def show_window(self):

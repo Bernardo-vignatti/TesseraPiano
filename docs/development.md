@@ -21,7 +21,7 @@ Na raiz, com as dependências do README instaladas:
 .venv\Scripts\python scripts\verify_ui.py
 ```
 
-O teste de interface percorre o assistente inicial, temas, páginas, importação, biblioteca e parada. Capturas ficam em `.local/previews`. Ele usa perfil temporário e não envia teclas ao sistema. Para abrir uma prévia manual isolada:
+O teste de interface percorre o assistente, temas, menus, diálogos, seletores, faixas, bandeja e transporte. Confere foco, teclado, o bloqueio da última faixa e o painel compacto. Capturas ficam em `.local/previews`. Ele usa perfil temporário, renderização de software para resultados estáveis e não envia teclas ao sistema. Para conferir as janelas Windows, execute com `QT_QPA_PLATFORM=windows`; para escalas maiores, use `QT_SCALE_FACTOR`. Para abrir uma prévia manual isolada:
 
 ```powershell
 .venv\Scripts\python -m tessera_piano --preview --profile .local\preview-profile
@@ -41,7 +41,9 @@ Use `--iscc CAMINHO` se o compilador estiver fora do local padrão. O script exe
 
 ## Publicar uma versão
 
-Atualize `src/tessera_piano/__init__.py` e o changelog. Execute as verificações e crie uma tag `vVERSÃO`. O pacote e o instalador usam essa definição de versão. O workflow de release constrói o instalador e o manifesto.
+Atualize `src/tessera_piano/__init__.py` e o changelog. Execute as verificações e crie uma tag `vVERSÃO`. O pacote e o instalador usam essa definição de versão. O workflow constrói o instalador e o manifesto em uma release de rascunho, que ainda não é oferecida pelo atualizador.
+
+Baixe os arquivos desse rascunho, confira o manifesto e execute `scripts/verify_installation.py --baseline INSTALADOR_ANTERIOR --installer INSTALADOR_NOVO`. O ensaio usa diretórios temporários e verifica instalação, recuperação, preferências, músicas e remoção de recursos obsoletos. Após passar, publique o rascunho como release mais recente no GitHub. O workflow não publica antes dessa conferência.
 
 A chave Ed25519 privada fica no secret `TESSERA_SIGNING_KEY` do GitHub Actions; somente a chave pública está no aplicativo. A chave precisa corresponder a `update_trust.py`. Não grave chaves privadas no repositório nem nos artefatos. Se o secret não existir, o workflow falha antes de publicar.
 

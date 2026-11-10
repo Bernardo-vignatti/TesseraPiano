@@ -38,6 +38,8 @@ Os dados ficam em `%LOCALAPPDATA%\TesseraPiano`. Atualização e desinstalação
 
 Temas claro, escuro e do sistema, redução de movimento, atalhos, importação por arrastar arquivos e modo bandeja estão nas configurações. **Ctrl+O** importa; **Ctrl+F** busca; **Ctrl+,** abre configurações.
 
+Na reprodução, interpretação, pedal e alcance ficam no painel lateral. Em janelas menores, abra **Interpretação** para acessar os mesmos ajustes. O menu da música permite renomear e remover; as exclusões podem ser desfeitas nas configurações.
+
 O aplicativo consulta novas releases no GitHub quando essa opção está ativada. Downloads são autenticados com manifesto assinado e SHA-256; a instalação acontece quando você escolher atualizar. Músicas e preferências não são enviadas. Não há telemetria.
 
 ## Desenvolvimento

@@ -30,7 +30,28 @@ ApplicationWindow {
     onClosing: close => close.accepted=backend.closeWindow()
     onPageChanged: pageFade.restart()
     Binding { target: Theme; property: "light"; value: (wizard.opened && wizard.step > 0 ? wizard.chosenTheme : backend.settings.theme) === "light" || ((wizard.opened && wizard.step > 0 ? wizard.chosenTheme : backend.settings.theme) === "system" && backend.systemLight) }
-    Binding { target: Theme; property: "reduced"; value: backend.settings.reduced_motion }
+    Binding { target: Theme; property: "reduced"; value: wizard.opened && wizard.step > 0 ? wizard.chosenMotion : backend.settings.reduced_motion }
+    Canvas {
+        id: backdrop
+        anchors.fill: parent
+        onWidthChanged: requestPaint()
+        onHeightChanged: requestPaint()
+        Connections { target: Theme; function onLightChanged() { backdrop.requestPaint() } }
+        onPaint: {
+            const c = getContext("2d"); c.reset()
+            const wash = c.createRadialGradient(width * .75, 0, 0, width * .75, 0, width)
+            wash.addColorStop(0, Theme.backdrop); wash.addColorStop(1, Theme.bg)
+            c.fillStyle = wash; c.fillRect(0, 0, width, height)
+            let seed = 7341
+            for (let i = 0; i < 22000; i++) {
+                seed = (seed * 16807) % 2147483647
+                const x = seed % Math.max(1, width)
+                seed = (seed * 16807) % 2147483647
+                c.fillStyle = i % 2 ? "rgba(255,255,255,.025)" : "rgba(0,0,0,.045)"
+                c.fillRect(x, seed % Math.max(1, height), 1, 1)
+            }
+        }
+    }
     Component.onCompleted: { width=backend.settings.window_width; height=backend.settings.window_height; if (!backend.settings.onboarding_completed) wizard.open() }
     Shortcut { sequence: "Ctrl+O"; onActivated: backend.importDialog() }
     Shortcut { sequence: "Ctrl+F"; onActivated: { root.navigate(0,false); library.focusSearch() } }
@@ -39,8 +60,9 @@ ApplicationWindow {
         anchors.fill: parent; anchors.bottomMargin: transport.height
         spacing: 0
         Rectangle {
-            Layout.preferredWidth: 196; Layout.fillHeight: true
-            color: Theme.side
+            Layout.preferredWidth: 208; Layout.fillHeight: true
+            gradient: Gradient { GradientStop { position: 0; color: Theme.light ? "#eeebe3" : "#20282c" } GradientStop { position: 1; color: Theme.side } }
+            Rectangle { anchors.right: parent.right; width: 1; height: parent.height; color: Theme.line; opacity: .6 }
             ColumnLayout {
                 anchors.fill: parent; anchors.margins: 18; spacing: 6
                 RowLayout {
@@ -48,13 +70,13 @@ ApplicationWindow {
                     Image { source: "../resources/icons/tessera-48.png"; Layout.preferredWidth: 34; Layout.preferredHeight: 34; sourceSize.width: 68; sourceSize.height: 68 }
                     Column {
                         spacing: 3
-                        Text { text: "Tessera"; color: Theme.text; font.family: Theme.font; font.pixelSize: 20; font.weight: Font.DemiBold }
+                        Text { text: "tessera"; color: Theme.text; font.family: Theme.font; font.pixelSize: 23; font.weight: Font.DemiBold; font.letterSpacing: -.7 }
                         Text { text: "P I A N O"; color: Theme.muted; font.family: Theme.font; font.pixelSize: 9 }
                     }
                 }
                 Text { text: "REPERTÓRIO"; Layout.leftMargin: 12; Layout.bottomMargin: 8; font.family: Theme.font; font.pixelSize: 9; font.letterSpacing: 1.6; color: Theme.faint }
                 Repeater {
-                    model: [{label:"Todas as músicas",icon:"\uE8F1",target:0,fav:false},{label:"Favoritos",icon:"\uE734",target:0,fav:true},{label:"Reprodução",icon:"\uE768",target:1,fav:false}]
+                    model: [{label:"Biblioteca",icon:"\uE8F1",target:0,fav:false},{label:"Favoritos",icon:"\uE734",target:0,fav:true},{label:"Reprodução",icon:"\uE768",target:1,fav:false}]
                     TButton {
                         required property var modelData
                         Layout.fillWidth: true; Layout.preferredHeight: 43
@@ -82,15 +104,12 @@ ApplicationWindow {
         }
         ColumnLayout {
             Layout.fillWidth: true; Layout.fillHeight: true
-            Layout.margins: 32; spacing: 26
-            RowLayout {
-                Layout.fillWidth: true; Layout.topMargin: 1
-                ColumnLayout {
-                    Layout.fillWidth: true; spacing: 5
-                    Text { text: [root.favoriteView ? "Favoritos" : "Biblioteca","Reprodução","Configurações","Ajuda e sobre"][root.page]; font.family: Theme.font; font.pixelSize: 28; font.weight: Font.DemiBold; color: Theme.text }
-                    Text { text: ["Seu repertório, pronto para o piano.","Interpretação, articulação e sustentação.","Seu piano. Suas preferências.","Tessera Piano " + backend.version][root.page]; font.family: Theme.font; font.pixelSize: 12; color: Theme.muted }
-                }
+            Layout.margins: 28; spacing: 22
+            Item {
+                Layout.fillWidth: true; implicitHeight: 38
+                Text { anchors.left: parent.left; anchors.verticalCenter: parent.verticalCenter; text: [root.favoriteView ? "Favoritos" : "Biblioteca","Reprodução","Configurações","Ajuda e sobre"][root.page]; font.family: Theme.font; font.pixelSize: 28; font.weight: Font.DemiBold; color: Theme.text }
                 Row {
+                    anchors.right: parent.right; anchors.verticalCenter: parent.verticalCenter
                     spacing: 8
                     Rectangle { width: 6; height: 6; radius: 3; color: backend.playback.busy ? Theme.accent : Theme.green; anchors.verticalCenter: parent.verticalCenter }
                     Text { text: backend.playback.importing ? "IMPORTANDO" : backend.playback.busy ? "EM EXECUÇÃO" : "PRONTO"; font.family: Theme.font; font.pixelSize: 9; font.letterSpacing: 1.2; color: Theme.muted }
@@ -98,9 +117,15 @@ ApplicationWindow {
             }
             StackLayout {
                 id: pages
+                objectName: "pages"
                 Layout.fillWidth: true; Layout.fillHeight: true
                 currentIndex: root.page
-                NumberAnimation { id: pageFade; target: pages; property: "opacity"; from: .4; to: 1; duration: Theme.motion }
+                transform: Translate { id: pageOffset }
+                ParallelAnimation {
+                    id: pageFade
+                    NumberAnimation { target: pages; property: "opacity"; from: .65; to: 1; duration: Theme.pageMotion; easing.type: Easing.OutCubic }
+                    NumberAnimation { target: pageOffset; property: "y"; from: 8; to: 0; duration: Theme.pageMotion; easing.type: Easing.OutCubic }
+                }
                 LibraryPage { id: library; onOpenPlayer: root.page=1 }
                 PlayerPage { }
                 SettingsPage { onSetupRequested: { wizard.step=0; wizard.open() } }
@@ -109,19 +134,19 @@ ApplicationWindow {
                     ColumnLayout {
                         width: parent.width; spacing: 22
                         Text { text: "Do arquivo ao seu piano"; font.family: Theme.font; font.pixelSize: 24; font.weight: Font.DemiBold; color: Theme.text }
-                        Text { Layout.fillWidth: true; text: "Importe MIDI, piano.json ou uma partitura TXT. Escolha uma música, deixe o piano aberto no Roblox e feche o chat. Pressione F6 e volte ao jogo durante a contagem."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
+                        Text { Layout.fillWidth: true; text: "Importe MIDI, JSON ou TXT. Abra o piano no Roblox, feche o chat e pressione F6. Volte ao jogo durante a contagem."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
                         Text { text: "F6  Iniciar     F8 / Esc  Parar     Ctrl+O  Importar     Ctrl+F  Buscar"; font.family: Theme.font; font.pixelSize: 13; color: Theme.accent }
                         Rectangle { Layout.fillWidth: true; height: 1; color: Theme.line }
                         Text { text: "Pedal e interpretação"; font.family: Theme.font; font.pixelSize: 18; font.weight: Font.DemiBold; color: Theme.text }
-                        Text { Layout.fillWidth: true; text: "No Visual Pianos, soltar Espaço liga a sustentação; segurar desliga. O modo Automático segue o MIDI e cria pedalização quando o arquivo não tem CC64. Original preserva o tempo; Natural e Expressivo acrescentam fraseado e articulação. O teclado comum não transmite a intensidade MIDI."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
+                        Text { Layout.fillWidth: true; text: "Espaço solto liga a sustentação; segurar desliga. Automático segue o CC64 ou cria pedal contextual. Natural e Expressivo acrescentam fraseado. O teclado comum não transmite velocity MIDI."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
                         Text { text: "Dados locais e código aberto"; font.family: Theme.font; font.pixelSize: 18; font.weight: Font.DemiBold; color: Theme.text }
-                        Text { Layout.fillWidth: true; text: "Músicas, preferências e logs ficam na sua pasta de dados. A desinstalação preserva sua biblioteca. As atualizações consultam o GitHub; o aplicativo não envia suas músicas e não usa telemetria. Código sob MIT; repertório e dependências conservam suas licenças."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
+                        Text { Layout.fillWidth: true; text: "Sua biblioteca fica neste computador. As atualizações consultam o GitHub; não há telemetria. Código MIT; repertório e dependências mantêm suas licenças."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
                         Flow { Layout.fillWidth: true; spacing: 9
                             TButton { text: "Código e documentação"; glyph: "\uE8A7"; onClicked: backend.openLink("github") }
                             TButton { text: "Visual Pianos"; onClicked: backend.openLink("game") }
                             TButton { text: "Créditos e licenças"; onClicked: backend.openLink("licenses") }
                         }
-                        Text { text: "Desenvolvido por Vignatti"; Layout.topMargin: 8; font.family: Theme.font; font.pixelSize: 12; color: Theme.faint }
+                        Text { text: "Tessera Piano " + backend.version + " · Vignatti"; Layout.topMargin: 8; font.family: Theme.font; font.pixelSize: 12; color: Theme.faint }
                     }
                 }
             }
@@ -130,12 +155,13 @@ ApplicationWindow {
     Rectangle {
         id: transport
         anchors.left: parent.left; anchors.right: parent.right; anchors.bottom: parent.bottom
-        height: 104; color: Theme.side
+        height: 100
+        gradient: Gradient { GradientStop { position: 0; color: Theme.surfaceTop } GradientStop { position: .12; color: Theme.side } }
         Rectangle { anchors.top: parent.top; width: parent.width; height: 1; color: Theme.line }
         RowLayout {
             anchors.fill: parent; anchors.leftMargin: 27; anchors.rightMargin: 32; spacing: 22
             ColumnLayout {
-                Layout.preferredWidth: 260; Layout.maximumWidth: 300; spacing: 6
+                Layout.preferredWidth: root.width < 1200 ? 190 : 260; Layout.maximumWidth: 300; spacing: 6
                 Text { text: backend.song.title; Layout.fillWidth: true; elide: Text.ElideRight; font.family: Theme.font; font.pixelSize: 13; font.weight: Font.DemiBold; color: Theme.text }
                 Text { text: backend.playback.busy ? backend.playback.message : backend.settings.layout + " teclas · " + ({original:"Original",natural:"Natural",expressive:"Expressivo"})[backend.settings.performance]; Layout.fillWidth: true; elide: Text.ElideRight; font.family: Theme.font; font.pixelSize: 11; color: Theme.muted }
             }
@@ -149,17 +175,14 @@ ApplicationWindow {
             }
             ColumnLayout {
                 Layout.fillWidth: true; spacing: 8
-                Slider {
+                TSlider {
                     id: timeline
                     Layout.fillWidth: true; implicitHeight: 22
                     from: 0; to: Math.max(.001,backend.song.duration)
                     value: backend.playback.position
                     enabled: !backend.playback.busy
                     onMoved: backend.seek(value)
-                    background: Rectangle { x: timeline.leftPadding; y: timeline.topPadding + timeline.availableHeight/2 - 2; width: timeline.availableWidth; height: 3; radius: 2; color: Theme.line
-                        Rectangle { width: parent.width * timeline.visualPosition; height: parent.height; radius: 2; color: Theme.accentFill }
-                    }
-                    handle: Rectangle { x: timeline.leftPadding + timeline.visualPosition * (timeline.availableWidth - width); y: timeline.topPadding + timeline.availableHeight/2 - height/2; width: 9; height: 9; radius: 5; color: timeline.hovered || timeline.pressed ? Theme.accentFill : Theme.muted }
+                    Accessible.name: "Posição da música"
                 }
                 RowLayout {
                     Layout.fillWidth: true
@@ -178,17 +201,16 @@ ApplicationWindow {
             Text { anchors.centerIn: parent; text: "Solte para importar suas músicas"; font.family: Theme.font; font.pixelSize: 25; color: Theme.text }
         }
     }
-    Popup {
+    TPopup {
         id: notification
         objectName: "notification"
         x: (root.width-width)/2; y: root.height-transport.height-height-18
         width: Math.min(660,root.width-80); padding: 17
+        focus: false
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnPressOutside
         property string message: ""
-        background: Rectangle { color: Theme.surface; border.color: Theme.line; radius: 9 }
         contentItem: Text { text: notification.message; wrapMode: Text.WordWrap; font.family: Theme.font; font.pixelSize: 13; color: Theme.text }
         Timer { id: notificationTimer; interval: 6500; onTriggered: notification.close() }
-        enter: Transition { NumberAnimation { property: "opacity"; from: 0; to: 1; duration: Theme.motion } }
     }
     Connections { target: backend; function onToast(message) { notification.message=message; notification.open(); notificationTimer.restart() } }
     Welcome { id: wizard; parent: Overlay.overlay }

@@ -53,6 +53,15 @@ Name: "{autodesktop}\Tessera Piano"; Filename: "{app}\TesseraPiano.exe"; Tasks: 
 Filename: "{app}\TesseraPiano.exe"; Description: "Abrir Tessera Piano"; Flags: nowait postinstall skipifsilent
 
 [InstallDelete]
+Type: filesandordirs; Name: "{app}\_internal\tessera_piano\resources\sources"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\tessera-master.png"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\tessera-160.png"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\tessera-256.png"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\tessera-32.png"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\tessera-64.png"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\tessera-96.png"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\installer-header.bmp"
+Type: files; Name: "{app}\_internal\tessera_piano\resources\icons\installer-side.bmp"
 Type: filesandordirs; Name: "{app}\app"
 Type: filesandordirs; Name: "{app}\runtime"
 Type: files; Name: "{app}\Desinstalar.exe"

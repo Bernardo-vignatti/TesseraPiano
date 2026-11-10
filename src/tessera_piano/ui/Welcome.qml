@@ -2,17 +2,26 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-Popup {
+TPopup {
     id: wizard
     objectName: "setupWizard"
     property int step: 0
     property string chosenTheme: backend.settings.theme
     property string chosenLayout: backend.settings.layout
     property string chosenStyle: backend.settings.performance
-    property string chosenPedal: "auto"
+    property string chosenPedal: backend.settings.pedal_mode
     property bool chosenTray: backend.settings.minimize_to_tray
     property bool chosenMotion: backend.settings.reduced_motion
     property bool chosenUpdates: backend.settings.check_updates
+    onOpened: {
+        chosenTheme = backend.settings.theme
+        chosenLayout = backend.settings.layout
+        chosenStyle = backend.settings.performance
+        chosenPedal = backend.settings.pedal_mode
+        chosenTray = backend.settings.minimize_to_tray
+        chosenMotion = backend.settings.reduced_motion
+        chosenUpdates = backend.settings.check_updates
+    }
     width: Math.min(700, parent.width - 64)
     height: 510
     anchors.centerIn: Overlay.overlay
@@ -20,7 +29,7 @@ Popup {
     closePolicy: Popup.NoAutoClose
     padding: 34
     Overlay.modal: Rectangle { color: "#b00b0c0e" }
-    background: Rectangle { color: Theme.bg; radius: 15; border.color: Theme.line }
+    background: Surface { radius: 16 }
     enter: Transition { NumberAnimation { property: "opacity"; from: 0; to: 1; duration: Theme.motion } }
     exit: Transition { NumberAnimation { property: "opacity"; from: 1; to: 0; duration: Theme.motion } }
     onStepChanged: appear.restart()
@@ -45,11 +54,11 @@ Popup {
                 ColumnLayout {
                     spacing: 17
                     Item { Layout.fillHeight: true }
-                    Text { text: "Um espaço para o seu repertório."; Layout.fillWidth: true; wrapMode: Text.WordWrap; font.family: Theme.font; font.pixelSize: 32; font.weight: Font.DemiBold; color: Theme.text }
-                    Text { text: "Prepare o Tessera para o seu piano. São quatro passos rápidos para escolher a aparência e o jeito de tocar."; Layout.fillWidth: true; wrapMode: Text.WordWrap; font.family: Theme.font; font.pixelSize: 14; lineHeight: 1.35; color: Theme.muted }
-                    Rectangle {
-                        Layout.fillWidth: true; Layout.preferredHeight: 65; radius: 8; color: Theme.surface; border.color: Theme.line
-                        Text { anchors.fill: parent; anchors.margins: 16; text: "Sua biblioteca e suas preferências ficam neste computador. Você pode rever tudo nas configurações."; wrapMode: Text.WordWrap; font.family: Theme.font; font.pixelSize: 12; color: Theme.muted; verticalAlignment: Text.AlignVCenter }
+                    Text { text: "Seu piano. Seu repertório."; Layout.fillWidth: true; wrapMode: Text.WordWrap; font.family: Theme.titleFont; font.pixelSize: 34; color: Theme.text }
+                    Text { text: "Escolha a aparência e prepare seu piano em quatro passos."; Layout.fillWidth: true; wrapMode: Text.WordWrap; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
+                    Item {
+                        Layout.fillWidth: true; Layout.preferredHeight: 110; clip: true
+                        StudioArt { anchors.fill: parent }
                     }
                     Item { Layout.fillHeight: true }
                 }
@@ -60,7 +69,7 @@ Popup {
                     RowLayout {
                         Layout.fillWidth: true; Layout.topMargin: 15; spacing: 14
                         Repeater {
-                            model: [{key:"dark",title:"Escuro",bg:"#1b1d20",side:"#141619",fg:"#e8e4dc"},{key:"light",title:"Claro",bg:"#f5f3ef",side:"#e8e5df",fg:"#444749"},{key:"system",title:"Sistema",bg:"#777a7b",side:"#434749",fg:"#e8e4dc"}]
+                            model: [{key:"dark",title:"Escuro",bg:"#222c30",side:"#151b1f",fg:"#eeeade"},{key:"light",title:"Claro",bg:"#faf8f1",side:"#e8e5dc",fg:"#293431"},{key:"system",title:"Sistema",bg:"#7a8581",side:"#4b5651",fg:"#eeeade"}]
                             ColumnLayout {
                                 required property var modelData
                                 Layout.fillWidth: true; spacing: 10
