@@ -7,6 +7,7 @@ import math
 import random
 
 from .keymap import KEY_TO_MIDI
+from .analysis import TempoMap, analyze
 from .music import PedalChange, Song, prepare_keyboard
 
 
@@ -21,79 +22,71 @@ def beat_length(song):
 
 
 def auto_pedal(song):
-    """Agrupa ataques e limpa a sustentação em mudanças de contexto e pausas."""
-    beat = beat_length(song)
-    groups = []
-    for note in sorted(song.notes, key=lambda n: n.start):
-        if not groups or note.start - groups[-1][0].start > min(0.055, beat * 0.12):
-            groups.append([])
-        groups[-1].append(note)
-    if not groups:
-        return []
+    """Repedaliza por contexto harmônico, respeitando pausas e articulação."""
+    analysis = song.metadata.get("analysis") or analyze(song)
+    tempo = TempoMap(song)
+    profile = analysis["profile"]
     changes = [PedalChange(0, False)]
-    last_clear = -beat
-    previous_classes, previous_bass = set(), None
-    previous_end = 0
-    for group in groups:
-        moment = group[0].start
-        classes = {pitch(n) % 12 for n in group}
-        bass = min(pitch(n) for n in group)
-        distance = 1 - len(classes & previous_classes) / max(1, len(classes | previous_classes))
-        silence = moment - previous_end > beat * 0.5
-        changed_bass = bass < 65 and bass != previous_bass
-        harmonic_change = distance > 0.55 and (len(group) >= 2 or changed_bass)
-        if (
-            last_clear < 0
-            or silence
-            or (moment - last_clear >= beat * 0.7 and harmonic_change)
-            or moment - last_clear >= beat * 3
-        ):
+    last, previous_chord, previous_bass = -10.0, "", None
+    for item in analysis["harmony"]:
+        moment = item["time"]
+        beat = tempo.length(moment)
+        harmonic = item["confidence"] >= 0.55 and item["chord"] != previous_chord
+        bass_change = item["bass"] != previous_bass
+        maximum = beat * (1.3 if profile == "rhythmic" else 3)
+        if moment - last >= maximum or (harmonic and bass_change and moment - last >= beat * 0.6):
             if moment > 0.04:
-                changes.append(
-                    PedalChange(
-                        max(
-                            last_clear + 0.01,
-                            min(moment - 0.025, previous_end + 0.04) if silence else moment - 0.025,
-                        ),
-                        False,
-                    )
-                )
-            changes.append(PedalChange(moment + min(0.035, beat * 0.06), True))
-            last_clear = moment
-        previous_classes = classes if len(classes) >= 2 else (previous_classes | classes)
-        if len(previous_classes) > 5:
-            previous_classes = classes
-        previous_bass = bass
-        previous_end = max(n.start + (n.gate_duration or n.duration) for n in group)
+                changes.append(PedalChange(max(0, moment - 0.012), False))
+            changes.append(PedalChange(moment + min(0.045, beat * 0.07), True))
+            last = moment
+        previous_chord, previous_bass = item["chord"], item["bass"]
+    # Une intervalos de som antes de localizar respirações reais, inclusive em acordes.
+    end = 0
+    for note in sorted(song.notes, key=lambda n: n.start):
+        beat = tempo.length(note.start)
+        if note.start - end > beat * 0.6 and end > 0:
+            changes.append(PedalChange(end + min(0.08, beat * 0.15), False))
+        end = max(end, note.start + (note.gate_duration or note.duration))
     changes.append(PedalChange(song.duration + 0.12, False))
     result = []
     for change in sorted(changes, key=lambda p: p.time):
         if not result or result[-1].down != change.down:
+            if result and change.time - result[-1].time < 0.012:
+                continue
             result.append(change)
     return result
 
 
-def interpret(song, style="natural", intensity=0.55, seed=17, pedal_mode="auto", speed=1.0):
+def interpret(
+    song,
+    style="natural",
+    intensity=0.55,
+    seed=17,
+    pedal_mode="auto",
+    speed=1.0,
+    profile="auto",
+    learned=False,
+    adapt=True,
+):
     if style not in ("original", "natural", "expressive"):
         raise ValueError("Interpretação desconhecida.")
     if pedal_mode not in ("auto", "midi", "on", "off", "ignore"):
         raise ValueError("Modo de pedal desconhecido.")
     intensity = max(0.0, min(1.0, float(intensity)))
     strength = 0 if style == "original" else intensity * (1.5 if style == "expressive" else 1)
-    beat = beat_length(song)
+    analysis = song.metadata.get("analysis") or analyze(song)
+    selected = analysis["profile"] if profile == "auto" else profile
+    analysis = dict(analysis, profile=selected)
+    strength *= {"restrained": 0.65, "cantabile": 1.0, "rhythmic": 0.4}.get(selected, 1)
+    if learned:
+        strength = 0  # O modelo já fornece fraseado; não aplicar uma segunda humanização.
+    tempo = TempoMap(song)
+    beat = tempo.length(0)
     onsets = sorted({n.start for n in song.notes})
     # Arquivos gravados ao vivo já carregam desvios; o complemento fica mais discreto.
-    quantized = sum(abs((t / (beat / 4)) - round(t / (beat / 4))) < 0.035 for t in onsets) / max(
-        1, len(onsets)
-    )
-    if quantized < 0.45:
+    if analysis["quantized"] < 0.45:
         strength *= 0.35
-    phrases = [0.0]
-    for before, current in zip(onsets, onsets[1:]):
-        if (
-            current - before > max(0.4, beat * 0.9) and current - phrases[-1] > beat * 2
-        ) or current - phrases[-1] >= beat * 8:
-            phrases.append(current)
+    phrases = list(analysis["phrases"])
     end = max(song.duration, onsets[-1] + 0.001)
     phrases.append(end)
 
@@ -101,7 +94,11 @@ def interpret(song, style="natural", intensity=0.55, seed=17, pedal_mode="auto",
         index = min(len(phrases) - 2, max(0, bisect_right(phrases, moment) - 1))
         start, finish = phrases[index : index + 2]
         phase = min(1, max(0, (moment - start) / max(0.001, finish - start)))
-        arch = strength * min(beat * 0.06, (finish - start) * 0.02) * math.sin(2 * math.pi * phase)
+        arch = (
+            strength
+            * min(tempo.length(moment) * 0.06, (finish - start) * 0.02)
+            * math.sin(2 * math.pi * phase)
+        )
         final = strength * beat * 0.18 * max(0, (moment - end * 0.9) / max(0.01, end * 0.1)) ** 2
         return max(0, moment + arch + final)
 
@@ -139,7 +136,10 @@ def interpret(song, style="natural", intensity=0.55, seed=17, pedal_mode="auto",
         dict(song.metadata, total_duration=warp(end), source_duration=song.duration),
         [PedalChange(warp(p.time), p.down) for p in song.pedal],
     )
-    explicit = bool(song.pedal or song.metadata.get("cc64_events", 0))
+    transformed.metadata["analysis"] = dict(
+        analysis, harmony=[dict(h, time=warp(h["time"])) for h in analysis["harmony"]]
+    )
+    explicit = analysis["pedal_quality"] in ("valid", "explicit_off")
     resets = song.metadata.get("channel_pedal", [])
     if resets and all(not event["down"] and event["time"] <= onsets[0] + 0.05 for event in resets):
         explicit = False
@@ -153,7 +153,11 @@ def interpret(song, style="natural", intensity=0.55, seed=17, pedal_mode="auto",
         transformed.pedal = []
         origin = "Desligado" if pedal_mode == "off" else "Manual"
     else:
-        origin = "MIDI" if explicit else "Sem CC64"
+        origin = (
+            ("Modelo" if song.metadata.get("model_pedal_used") else "MIDI")
+            if explicit
+            else "Sem CC64"
+        )
     if transformed.pedal and pedal_mode != "ignore":
         times = [p.time for p in transformed.pedal]
         clear = [p.time for p in transformed.pedal if not p.down]
@@ -167,11 +171,15 @@ def interpret(song, style="natural", intensity=0.55, seed=17, pedal_mode="auto",
             sustained.append(note)
         transformed.notes = sustained
     transformed.metadata.update(
+        analysis=transformed.metadata["analysis"],
+        expression_origin="Modelo local" if learned else "Regras musicais",
         performance_style=style,
         performance_seed=seed,
         pedal_origin=origin,
         phrase_count=len(phrases) - 1,
     )
+    if not adapt:
+        return transformed
     prepared, adjustments = prepare_keyboard(transformed, pedal_mode, speed)
     prepared.metadata["keyboard_adjustments"] = adjustments
     return prepared

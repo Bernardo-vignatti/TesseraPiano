@@ -14,9 +14,11 @@ from PySide6.QtWidgets import QApplication, QFileDialog, QMenu, QSystemTrayIcon
 from . import __version__
 from .keymap import KEY_TO_MIDI, MIDI_TO_KEY_88
 from .keyboard_windows import PreviewKeyboard, WindowsKeyboard
-from .music import Song, Note, PedalChange, apply_layout
-from .performance import interpret
-from .midi import select_tracks
+from .music import Song, Note, PedalChange
+from .preparation import prepare
+from .model_pack import ModelPack
+from .chroma import Chroma, KEY_POSITIONS
+from .guided import guide_song, manual_song, manual_issues
 from .playback import PlaybackStopped, play_song
 from .storage import excerpt, normalize_settings
 from . import updates
@@ -30,6 +32,7 @@ class Controller(QObject):
     settingsChanged = Signal()
     playbackChanged = Signal()
     updateChanged = Signal()
+    featuresChanged = Signal()
     toast = Signal(str)
     completed = Signal(str, object)
     activate = Signal()
@@ -50,10 +53,29 @@ class Controller(QObject):
         self.closing = False
         self.cancel = threading.Event()
         self.download_cancel = threading.Event()
+        self.prepare_cancel = threading.Event()
+        self.model_cancel = threading.Event()
+        self.soft_stop = threading.Event()
+        self.model_pack = ModelPack(profile.directory)
+        self.features_state = {
+            "modelReady": self.model_pack.ready(),
+            "modelState": "idle",
+            "modelProgress": 0,
+            "analysisProgress": 0,
+            "chromaState": "idle",
+            "summary": "",
+            "guideHits": 0,
+            "guideTotal": 0,
+            "timing": 0,
+            "manualIssues": 0,
+        }
+        self.guide_active = []
         self.worker = None
+        self.tasks = set()
         self.offset = 0.0
         self.position = 0.0
         self.started = None
+        self.active_speed = self.profile.config["speed"]
         self.origin = 0
         self.status = "idle"
         self.message = "Pronto para tocar"
@@ -150,6 +172,9 @@ class Controller(QObject):
             "adjustments": sum(song.metadata.get("keyboard_adjustments", {}).values()),
             "personal": self.current.personal,
             "preparing": self.preparing,
+            "profile": song.metadata.get("analysis", {}).get("profile_label", ""),
+            "confidence": song.metadata.get("analysis", {}).get("confidence", 0),
+            "expressionOrigin": song.metadata.get("expression_origin", "Regras musicais"),
         }
 
     @Property("QVariantList", notify=songChanged)
@@ -176,12 +201,19 @@ class Controller(QObject):
             "position": self.position,
             "countdown": self.countdown,
             "busy": self.status != "idle",
-            "active": [KEY_TO_MIDI[k] for k in list(self.keyboard.note_labels.values())],
+            "active": self.guide_active
+            if self.settings["session_mode"] == "guided"
+            else [KEY_TO_MIDI[k] for k in list(self.keyboard.note_labels.values())],
             "pedal": self.keyboard.sustain_enabled,
             "pedalManaged": self.keyboard.pedal_managed,
             "preview": self.preview,
+            "speed": self.active_speed if self.status != "idle" else self.settings["speed"],
             "importing": self.importing,
         }
+
+    @Property("QVariantMap", notify=featuresChanged)
+    def features(self):
+        return self.features_state
 
     @Property("QVariantMap", notify=updateChanged)
     def update(self):
@@ -190,29 +222,83 @@ class Controller(QObject):
     def task(self, kind, function):
         def run():
             try:
-                value = function()
-            except Exception as exc:
-                logging.exception("Falha em %s", kind)
-                value = exc
-            if not self.closing:
-                self.completed.emit(kind, value)
+                try:
+                    value = function()
+                except Exception as exc:
+                    logging.exception("Falha em %s", kind)
+                    value = exc
+                if not self.closing:
+                    self.completed.emit(kind, value)
+            finally:
+                self.tasks.discard(threading.current_thread())
 
-        threading.Thread(target=run, daemon=True, name=f"tessera-{kind}").start()
+        thread = threading.Thread(target=run, daemon=True, name=f"tessera-{kind}")
+        self.tasks.add(thread)
+        thread.start()
 
     @Slot(str, object)
     def _completed(self, kind, value):
         if kind == "prepare":
-            if isinstance(value, Exception):
-                self.preparing = False
-                self.toast.emit(str(value))
+            generation, prepared = value
+            if generation != self.generation:
+                return
+            self.preparing = False
+            if isinstance(prepared, Exception):
+                if not isinstance(prepared, InterruptedError):
+                    self.toast.emit(str(prepared))
             else:
-                generation, prepared = value
-                if generation != self.generation:
-                    return
                 self.prepared = prepared
-                self.preparing = False
                 self.offset = self.position = 0
+                self.features_state["manualIssues"] = manual_issues(
+                    manual_song(prepared, self.settings["guide_arrangement"]),
+                    self.settings["guide_rollover"],
+                )
+                warning = prepared.metadata.get("preparation_warning")
+                if warning:
+                    self.toast.emit(warning)
+            self.featuresChanged.emit()
             self.songChanged.emit()
+        elif kind == "prepare-progress":
+            generation, progress = value
+            if generation == self.generation:
+                self.features_state["analysisProgress"] = progress
+                self.featuresChanged.emit()
+        elif kind == "model-progress":
+            self.features_state["modelProgress"] = value
+            self.featuresChanged.emit()
+        elif kind == "model-install":
+            ready = self.model_pack.ready()
+            self.features_state.update(modelReady=ready, modelState="idle")
+            self.featuresChanged.emit()
+            if isinstance(value, Exception):
+                self.toast.emit(str(value))
+            elif ready:
+                self.setSetting("expression_engine", "model")
+                self.toast.emit("Motor local instalado. A preparação funciona offline.")
+        elif kind == "chroma-test":
+            self.features_state["chromaState"] = (
+                "error" if isinstance(value, Exception) else "tested"
+            )
+            self.featuresChanged.emit()
+            self.toast.emit(
+                str(value)
+                if isinstance(value, Exception)
+                else "Confirme se todas as teclas indicadas acenderam."
+            )
+        elif kind == "guide-progress":
+            position, stats, active = value
+            self.position = self.origin + position
+            self.guide_active = active
+            self.features_state.update(
+                guideHits=stats["hits"], guideTotal=stats["total"], timing=stats["timing_ms"]
+            )
+            self.featuresChanged.emit()
+            self.playbackChanged.emit()
+        elif kind == "guide-result":
+            self.features_state["summary"] = (
+                f"{value['hits']} de {value['total']} notas · desvio {value['timing_ms']:+d} ms"
+            )
+            self.featuresChanged.emit()
         elif kind == "import":
             self.importing = False
             self.libraryChanged.emit()
@@ -265,8 +351,15 @@ class Controller(QObject):
             self.updateChanged.emit()
         elif kind == "started":
             self.started, self.origin = value
-            self.status = "playing"
-            self.message = "Tocando no Roblox"
+            self.status = "stopping" if self.soft_stop.is_set() else "playing"
+            self.message = (
+                "Acompanhe as luzes"
+                if self.settings["session_mode"] == "guided"
+                else "Tocando no Roblox"
+            )
+            self.playbackChanged.emit()
+        elif kind == "session-speed":
+            self.active_speed = value
             self.playbackChanged.emit()
         elif kind == "countdown":
             self.countdown = value
@@ -274,6 +367,7 @@ class Controller(QObject):
             self.playbackChanged.emit()
         elif kind == "done":
             self.started = None
+            self.guide_active = []
             self.status = "idle"
             self.countdown = 0
             self.message = str(value) if value else "Execução concluída"
@@ -303,33 +397,109 @@ class Controller(QObject):
                 self.profile.config["track_filter"] = []
             self.profile.config["last_song"] = ident
         self.offset = self.position = 0
+        self.profile.config.update(loop_start=0, loop_end=0, loop_enabled=False)
         self.prepare()
 
     def prepare(self):
+        self.prepare_cancel.set()
+        self.prepare_cancel = threading.Event()
+        cancel = self.prepare_cancel
         self.generation += 1
         generation = self.generation
         self.prepared = None
         if not self.current:
             self.songChanged.emit()
             return
-        source = self.current.song
-        config = dict(self.settings)
+        source, config = self.current.song, dict(self.settings)
         self.preparing = True
+        self.features_state["analysisProgress"] = 0
         self.songChanged.emit()
 
         def process():
-            song = apply_layout(source, config["layout"])
-            song = select_tracks(song, config["track_filter"])
-            return generation, interpret(
-                song,
-                config["performance"],
-                config["intensity"] / 100,
-                config["seed"],
-                config["pedal_mode"],
-                config["speed"] / 100,
-            )
+            try:
+                result = prepare(
+                    source,
+                    config,
+                    self.profile.directory,
+                    cancel,
+                    lambda p: self.completed.emit("prepare-progress", (generation, p)),
+                )
+            except Exception as exc:
+                result = exc
+            return generation, result
 
         self.task("prepare", process)
+
+    @Slot()
+    def cancelPreparation(self):
+        self.prepare_cancel.set()
+
+    @Slot()
+    def installModel(self):
+        if (
+            self.features_state["modelState"] == "installing"
+            or self.preview
+            or self.preparing
+            or self.status != "idle"
+        ):
+            return
+        self.model_cancel.clear()
+        self.features_state.update(modelState="installing", modelProgress=0)
+        self.featuresChanged.emit()
+        self.task(
+            "model-install",
+            lambda: self.model_pack.install(
+                lambda p: self.completed.emit("model-progress", p),
+                self.model_cancel,
+                force=self.model_pack.ready(),
+            ),
+        )
+
+    @Slot()
+    def cancelModel(self):
+        self.model_cancel.set()
+
+    @Slot()
+    def testChroma(self):
+        if self.status != "idle" or self.features_state["chromaState"] == "testing":
+            return
+        self.setSetting("guide_calibrated", False)
+        self.features_state["chromaState"] = "testing"
+        self.featuresChanged.emit()
+        config = dict(self.settings)
+
+        def test():
+            with Chroma(config["guide_positions"], config["guide_brightness"]) as chroma:
+                for keys, color in (
+                    (list("1234567890"), (240, 170, 70)),
+                    (list("qwertyuiopasdfghjklzxcvbnm"), (240, 170, 70)),
+                    (["shift", "ctrl", "space"], (100, 140, 240)),
+                ):
+                    chroma.frame({k: color for k in keys})
+                    for _ in range(60):
+                        if self.closing:
+                            return
+                        time.sleep(0.025)
+
+        self.task("chroma-test", test)
+
+    @Slot(str, result="QVariantList")
+    def chromaPosition(self, key):
+        return self.settings["guide_positions"].get(key, KEY_POSITIONS.get(key, (0, 0)))
+
+    @Slot(str, int, int)
+    def mapChromaKey(self, key, row, column):
+        if (
+            self.status != "idle"
+            or key not in KEY_POSITIONS
+            or not 0 <= row < 6
+            or not 0 <= column < 22
+        ):
+            return
+        positions = dict(self.settings["guide_positions"])
+        positions[key] = [row, column]
+        self.setSetting("guide_positions", positions)
+        self.setSetting("guide_calibrated", False)
 
     @Slot(int)
     def toggleTrack(self, track):
@@ -359,6 +529,17 @@ class Controller(QObject):
             "speed",
             "mode",
             "track_filter",
+            "session_mode",
+            "expression_engine",
+            "expression_profile",
+            "guide_mode",
+            "guide_arrangement",
+            "guide_positions",
+            "guide_lead",
+            "guide_latency",
+            "guide_rollover",
+            "guide_brightness",
+            "guide_palette",
         ):
             self.toast.emit("Interrompa a reprodução para alterar este ajuste.")
             return
@@ -379,6 +560,17 @@ class Controller(QObject):
             "pedal_mode",
             "speed",
             "track_filter",
+            "session_mode",
+            "expression_engine",
+            "expression_profile",
+            "guide_mode",
+            "guide_arrangement",
+            "guide_positions",
+            "guide_lead",
+            "guide_latency",
+            "guide_rollover",
+            "guide_brightness",
+            "guide_palette",
         ):
             self.prepare()
 
@@ -487,12 +679,53 @@ class Controller(QObject):
             self.position = self.offset = max(0, min(position, self.prepared.duration - 0.001))
             self.playbackChanged.emit()
 
+    @Slot(str)
+    def markLoop(self, mark):
+        if self.status != "idle" or not self.prepared:
+            return
+        if mark == "clear":
+            self.setSetting("loop_enabled", False)
+            return
+        if mark == "a":
+            self.setSetting("loop_start", self.position)
+            self.setSetting("loop_enabled", False)
+        elif mark == "b":
+            if self.position <= self.settings["loop_start"] + 0.02:
+                self.toast.emit("Mova o cursor para depois do início do trecho.")
+                return
+            self.setSetting("loop_end", self.position)
+            self.setSetting("loop_enabled", True)
+
     @Slot()
     def start(self):
-        if self.status != "idle" or self.preparing or not self.prepared:
+        if (
+            self.status != "idle"
+            or self.preparing
+            or not self.prepared
+            or self.features_state["chromaState"] == "testing"
+        ):
             return
-        song = excerpt(self.prepared, self.offset)
-        self.begin(song, self.offset)
+        if self.settings["session_mode"] == "guided":
+            if not self.settings["guide_calibrated"] and not self.preview:
+                self.toast.emit("Teste e confirme as luzes nas configurações do modo guiado.")
+                return
+            if self.features_state["manualIssues"]:
+                self.toast.emit(
+                    "Há combinações incompatíveis. Simplifique ou distribua os acordes para praticar."
+                )
+                return
+        source = (
+            manual_song(self.prepared, self.settings["guide_arrangement"])
+            if self.settings["session_mode"] == "guided"
+            else self.prepared
+        )
+        offset = self.settings["loop_start"] if self.settings["loop_enabled"] else self.offset
+        end = self.settings["loop_end"] if self.settings["loop_enabled"] else None
+        song = excerpt(source, offset, end)
+        if not song.notes:
+            self.toast.emit("O trecho escolhido não contém notas.")
+            return
+        self.begin(song, offset)
 
     @Slot(str)
     def testInstrument(self, kind):
@@ -525,11 +758,15 @@ class Controller(QObject):
 
     def begin(self, song, offset, test=False):
         config = dict(self.settings)
+        if config["loop_enabled"]:
+            config["repeat"] = True
         if test:
-            config.update(pedal_mode="midi", speed=100, repeat=False)
+            config.update(pedal_mode="midi", speed=100, repeat=False, session_mode="auto")
         self.keyboard.mode = config["mode"]
         self.status = "countdown"
         self.cancel = threading.Event()
+        self.soft_stop = threading.Event()
+        self.features_state["summary"] = ""
         self.playbackChanged.emit()
 
         def perform():
@@ -557,20 +794,49 @@ class Controller(QObject):
                         "Solte Espaço e as teclas modificadoras antes de começar."
                     )
                 while True:
+                    self.completed.emit("session-speed", config["speed"])
                     self.completed.emit("started", (time.perf_counter(), offset))
-                    play_song(
-                        song,
-                        config["speed"] / 100,
-                        self.keyboard,
-                        self.cancel,
-                        target,
-                        lambda *args: None,
-                        config["pedal_mode"],
-                    )
+                    if config["session_mode"] == "guided":
+                        with Chroma(
+                            config["guide_positions"], config["guide_brightness"]
+                        ) as chroma:
+                            result = guide_song(
+                                song,
+                                config["speed"] / 100,
+                                self.keyboard,
+                                self.cancel,
+                                target,
+                                chroma,
+                                config,
+                                lambda p, stats, active: self.completed.emit(
+                                    "guide-progress", (p, stats, active)
+                                ),
+                                self.soft_stop,
+                            )
+                        self.completed.emit("guide-result", result)
+                        if (
+                            config["guide_ramp"]
+                            and result["hits"] >= result["total"] * 0.8
+                            and config["speed"] < 100
+                        ):
+                            config["speed"] = min(100, config["speed"] + 5)
+                    else:
+                        play_song(
+                            song,
+                            config["speed"] / 100,
+                            self.keyboard,
+                            self.cancel,
+                            target,
+                            lambda *args: None,
+                            config["pedal_mode"],
+                            self.soft_stop,
+                        )
                     if not config["repeat"] or test:
                         break
                     if self.cancel.wait(0.4):
                         raise PlaybackStopped("Reprodução interrompida.")
+                    if self.soft_stop.is_set():
+                        raise PlaybackStopped("Parada suave concluída.")
             except PlaybackStopped as exc:
                 failure = str(exc)
             except Exception as exc:
@@ -578,7 +844,8 @@ class Controller(QObject):
                 failure = str(exc)
             finally:
                 try:
-                    self.keyboard.release_all()
+                    if config["session_mode"] != "guided":
+                        self.keyboard.release_all()
                 except Exception as exc:
                     failure = str(exc)
                 if not self.closing:
@@ -589,6 +856,18 @@ class Controller(QObject):
 
     @Slot()
     def stop(self):
+        if self.status == "idle":
+            return
+        if self.status in ("countdown", "stopping"):
+            self.stopNow()
+            return
+        self.soft_stop.set()
+        self.status = "stopping"
+        self.message = "Concluindo a frase… · Esc interrompe agora"
+        self.playbackChanged.emit()
+
+    @Slot()
+    def stopNow(self):
         if self.status != "idle":
             self.cancel.set()
             self.status = "stopping"
@@ -597,16 +876,22 @@ class Controller(QObject):
 
     def tick(self):
         if self.closing:
-            if not self.worker or not self.worker.is_alive():
+            if (not self.worker or not self.worker.is_alive()) and not self.tasks:
                 QApplication.instance().quit()
             return
         keys = {key: self.keyboard.down(key) for key in (0x75, 0x77, 0x1B)}
-        if keys[0x77] or keys[0x1B]:
+        if keys[0x1B]:
+            self.stopNow()
+        elif keys[0x77] and not self.hotkeys.get(0x77):
             self.stop()
         elif keys[0x75] and not self.hotkeys.get(0x75):
             self.start()
         self.hotkeys = keys
-        if self.status == "playing" and self.started is not None:
+        if (
+            self.status in ("playing", "stopping")
+            and self.started is not None
+            and self.settings["session_mode"] != "guided"
+        ):
             total = self.prepared.duration if self.prepared else 0
             self.position = min(
                 total,
@@ -621,7 +906,7 @@ class Controller(QObject):
         self.updater.update(state="checking", message="Consultando versões no GitHub…")
         self.updateChanged.emit()
         self.setSetting("last_update_check", time.time())
-        self.task("check", updates.check_release)
+        self.task("check", lambda: updates.check_release(self.settings["update_channel"]))
 
     @Slot()
     def downloadUpdate(self):
@@ -639,6 +924,7 @@ class Controller(QObject):
                 self.profile.directory / "updates",
                 lambda p: self.completed.emit("download-progress", p),
                 self.download_cancel,
+                allow_prerelease=self.settings["update_channel"] == "beta",
             ),
         )
 
@@ -649,7 +935,11 @@ class Controller(QObject):
             return
         if self.update_installer:
             try:
-                updates.launch_installer(self.update_installer, self.profile.directory)
+                updates.launch_installer(
+                    self.update_installer,
+                    self.profile.directory,
+                    allow_prerelease=self.settings["update_channel"] == "beta",
+                )
                 self.quit()
             except Exception as exc:
                 self.toast.emit(str(exc))
@@ -755,6 +1045,8 @@ class Controller(QObject):
         self.closing = True
         self.cancel.set()
         self.download_cancel.set()
+        self.prepare_cancel.set()
+        self.model_cancel.set()
         if self.window:
             self.window.hide()
         if self.tray:

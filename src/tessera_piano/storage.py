@@ -13,12 +13,30 @@ import tempfile
 import time
 import shutil
 
+from . import __version__
 from .music import Song, PedalChange, parse_song, from_steps
 from .midi import read_midi
 from .names import clean_title, filename_title
 from .score_text import parse_score
 
 DEFAULTS = {
+    "session_mode": "auto",
+    "expression_engine": "rules",
+    "expression_profile": "auto",
+    "guide_mode": "follow",
+    "guide_arrangement": "full",
+    "guide_lead": 650,
+    "guide_latency": 0,
+    "guide_brightness": 70,
+    "guide_rollover": 10,
+    "guide_palette": "amber",
+    "guide_calibrated": False,
+    "guide_ramp": False,
+    "guide_positions": {},
+    "loop_start": 0,
+    "loop_end": 0,
+    "loop_enabled": False,
+    "update_channel": "beta" if "-" in __version__ else "stable",
     "speed": 100,
     "countdown": 5,
     "mode": "scan",
@@ -55,6 +73,12 @@ def normalize_settings(values):
         return result
     result.update({k: v for k, v in values.items() if k in DEFAULTS})
     ranges = {
+        "guide_lead": (150, 2000),
+        "guide_latency": (-300, 300),
+        "guide_brightness": (10, 100),
+        "guide_rollover": (2, 30),
+        "loop_start": (0, 7200),
+        "loop_end": (0, 7200),
         "speed": (25, 150),
         "countdown": (1, 30),
         "txt_bpm": (20, 400),
@@ -70,6 +94,13 @@ def normalize_settings(values):
         if type(value) not in (int, float) or not math.isfinite(value) or not low <= value <= high:
             result[key] = DEFAULTS[key]
     choices = {
+        "session_mode": ("auto", "guided"),
+        "expression_engine": ("rules", "model"),
+        "expression_profile": ("auto", "restrained", "cantabile", "rhythmic"),
+        "guide_mode": ("follow", "practice"),
+        "guide_arrangement": ("full", "melody", "distributed"),
+        "guide_palette": ("amber", "teal"),
+        "update_channel": ("stable", "beta"),
         "layout": ("61", "88"),
         "mode": ("scan", "virtual"),
         "pedal_mode": ("auto", "midi", "on", "off", "ignore"),
@@ -80,6 +111,9 @@ def normalize_settings(values):
         if result[key] not in valid:
             result[key] = DEFAULTS[key]
     for key in (
+        "guide_calibrated",
+        "guide_ramp",
+        "loop_enabled",
         "repeat",
         "reduced_motion",
         "onboarding_completed",
@@ -100,6 +134,21 @@ def normalize_settings(values):
     result["track_filter"] = [v for v in result["track_filter"] if type(v) is int and v >= 0]
     if not isinstance(result["title_overrides"], dict):
         result["title_overrides"] = {}
+    positions = result["guide_positions"]
+    result["guide_positions"] = (
+        {
+            k: v
+            for k, v in positions.items()
+            if k in list("1234567890qwertyuiopasdfghjklzxcvbnm") + ["shift", "ctrl", "space"]
+            and isinstance(v, list)
+            and len(v) == 2
+            and all(type(x) is int for x in v)
+            and 0 <= v[0] < 6
+            and 0 <= v[1] < 22
+        }
+        if isinstance(positions, dict)
+        else {}
+    )
     result["schema_version"] = 4
     if not isinstance(result["last_song"], str):
         result["last_song"] = ""
@@ -336,7 +385,7 @@ class Profile:
         return next((i for i in self.items if i.ident == record["ident"]), None)
 
 
-def excerpt(song, offset):
+def excerpt(song, offset, end=None):
     """Inicia do ponto escolhido e retoma notas ainda sustentadas nesse ponto."""
     offset = float(offset)
     if not math.isfinite(offset) or offset < 0 or offset >= song.duration:
@@ -359,6 +408,11 @@ def excerpt(song, offset):
         if n.start + n.duration > offset + 0.001
     ]
     metadata = dict(song.metadata)
+    tempo = song.metadata.get("tempo_map", [])
+    active_tempo = next((e for e in reversed(tempo) if e["time"] <= offset), None)
+    metadata["tempo_map"] = ([dict(active_tempo, time=0)] if active_tempo else []) + [
+        dict(e, time=e["time"] - offset) for e in tempo if e["time"] > offset
+    ]
     metadata["total_duration"] = (
         max(song.duration, float(metadata.get("total_duration", 0))) - offset
     )
@@ -372,4 +426,21 @@ def excerpt(song, offset):
         if song.pedal
         else []
     )
+    if end is not None:
+        length = min(song.duration, end) - offset
+        if length <= 0.02:
+            raise ValueError("Marque um trecho com pelo menos 20 ms.")
+        notes = [
+            replace(
+                n,
+                duration=min(n.duration, length - n.start),
+                gate_duration=min(n.gate_duration or n.duration, length - n.start),
+            )
+            for n in notes
+            if n.start < length - 0.001
+        ]
+        pedal = [p for p in pedal if p.time < length] + (
+            [PedalChange(length, False)] if pedal else []
+        )
+        metadata["total_duration"] = length
     return Song(song.title, notes, metadata, pedal)

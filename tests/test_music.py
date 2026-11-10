@@ -163,7 +163,7 @@ class MusicTests(unittest.TestCase):
 
         kb = Keyboard()
 
-        def wait(deadline, event, keyboard, target):
+        def wait(deadline, event, keyboard, target, soft_stop=None):
             if cancel.is_set():
                 raise playback.PlaybackStopped()
             now[0] = deadline

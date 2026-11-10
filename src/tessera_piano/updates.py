@@ -29,14 +29,14 @@ def canonical_manifest(manifest):
     ).encode("utf-8")
 
 
-def verify_manifest(manifest, public_key=PUBLIC_KEY):
+def verify_manifest(manifest, public_key=PUBLIC_KEY, allow_prerelease=False):
     try:
         Ed25519PublicKey.from_public_bytes(base64.b64decode(public_key, validate=True)).verify(
             base64.b64decode(manifest["signature"], validate=True), canonical_manifest(manifest)
         )
         version = Version(manifest["version"])
         asset = manifest["windows-x64"]
-        if manifest["schema"] != 1 or version.is_prerelease:
+        if manifest["schema"] != 1 or (version.is_prerelease and not allow_prerelease):
             raise ValueError("Versão incompatível com o canal estável.")
         url = urlparse(asset["url"])
         if (
@@ -69,8 +69,22 @@ def read_json(url):
     return json.loads(data)
 
 
-def check_release():
-    release = read_json(f"https://api.github.com/repos/{REPOSITORY}/releases/latest")
+def check_release(channel="stable"):
+    if channel == "beta":
+        releases = read_json(f"https://api.github.com/repos/{REPOSITORY}/releases?per_page=20")
+        candidates = []
+        for item in releases:
+            try:
+                version = Version(item["tag_name"].lstrip("v"))
+                if not item.get("draft", False):
+                    candidates.append((version, item))
+            except (KeyError, InvalidVersion):
+                continue
+        if not candidates:
+            return None
+        release = max(candidates, key=lambda pair: pair[0])[1]
+    else:
+        release = read_json(f"https://api.github.com/repos/{REPOSITORY}/releases/latest")
     try:
         if Version(release["tag_name"].lstrip("v")) <= Version(__version__):
             return None
@@ -82,14 +96,16 @@ def check_release():
     url = asset["browser_download_url"]
     if not url.startswith(f"https://github.com/{REPOSITORY}/releases/download/"):
         raise ValueError("Endereço do manifesto inválido.")
-    manifest = verify_manifest(read_json(url))
+    manifest = verify_manifest(read_json(url), allow_prerelease=channel == "beta")
     if Version(manifest["version"]) != Version(release["tag_name"].lstrip("v")):
         raise ValueError("A versão do manifesto diverge da release.")
     return manifest
 
 
-def download_update(manifest, directory, progress=lambda value: None, cancel=None):
-    verify_manifest(manifest)
+def download_update(
+    manifest, directory, progress=lambda value: None, cancel=None, allow_prerelease=False
+):
+    verify_manifest(manifest, allow_prerelease=allow_prerelease)
     directory = Path(directory)
     directory.mkdir(parents=True, exist_ok=True)
     asset = manifest["windows-x64"]
@@ -122,10 +138,11 @@ def download_update(manifest, directory, progress=lambda value: None, cancel=Non
         temporary.unlink(missing_ok=True)
 
 
-def launch_installer(installer, profile):
+def launch_installer(installer, profile, allow_prerelease=False):
     installer = Path(installer).resolve()
     manifest = verify_manifest(
-        json.loads(installer.with_suffix(".json").read_text(encoding="utf-8"))
+        json.loads(installer.with_suffix(".json").read_text(encoding="utf-8")),
+        allow_prerelease=allow_prerelease,
     )
     if Version(manifest["version"]) <= Version(__version__):
         raise ValueError("A atualização precisa ser mais recente que a instalação atual.")
