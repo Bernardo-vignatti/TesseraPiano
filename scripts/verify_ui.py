@@ -146,6 +146,7 @@ def exercise(app):
         click(window, choice)
         choice_popup = choice.findChild(QObject, "performanceChoicePopup")
         wait_for(lambda: choice_popup.property("opened"))
+        wait_for(lambda: visual_item(window.contentItem(), "performanceChoiceOption0") is not None)
         click(window, visual_item(window.contentItem(), "performanceChoiceOption0"))
         assert controller.settings["performance"] == "original"
         wait_for(lambda: not choice_popup.property("visible"))
@@ -177,6 +178,7 @@ def exercise(app):
         click(window, window.findChild(QObject, "tracksButton"))
         tracks = window.findChild(QObject, "tracksPopup")
         wait_for(lambda: tracks.property("opened"))
+        wait_for(lambda: visual_item(window.contentItem(), "track-1") is not None)
         first_track = visual_item(window.contentItem(), "track-0")
         second_track = visual_item(window.contentItem(), "track-1")
         window.grabWindow().save(str(output / "tracks.png"))

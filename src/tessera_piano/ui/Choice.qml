@@ -50,7 +50,7 @@ ComboBox {
         focus: false
         y: control.height + 4
         width: control.width
-        implicitHeight: Math.min(280, contentItem.implicitHeight + 12)
+        implicitHeight: Math.min(280, control.count * 42 + 12)
         contentItem: ListView {
             clip: true
             implicitHeight: contentHeight
