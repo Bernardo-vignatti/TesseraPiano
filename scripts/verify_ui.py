@@ -219,9 +219,15 @@ def exercise(app):
         if controller.tray:
             assert not controller.tray_play.isEnabled()
             assert controller.tray_stop.isEnabled()
-        controller.stop()
-        pause(150)
-        assert controller.status == "idle"
+        read_key = controller.keyboard.down
+        controller.keyboard.down = lambda vk: vk == 0x77
+        controller.tick()
+        assert controller.status == "stopping" and controller.soft_stop.is_set()
+        controller.tick()  # Manter F8 pressionado não vira um segundo pedido.
+        assert not controller.cancel.is_set()
+        controller.keyboard.down = read_key
+        controller.tick()
+        wait_for(lambda: controller.status == "idle", timeout=2)
         assert not controller.keyboard.note_labels
         if controller.tray:
             assert controller.tray_play.isEnabled()
@@ -235,6 +241,42 @@ def exercise(app):
         click(window, speed, speed.width() - 16, speed.height() / 2)
         assert controller.settings["speed"] == 105
         controller.setSetting("speed", 100)
+        window.setProperty("page", 1)
+        pause(250)
+        session = visual_item(window.contentItem(), "sessionChoice")
+        click(window, session)
+        session_popup = session.findChild(QObject, "sessionChoicePopup")
+        wait_for(lambda: session_popup.property("opened"))
+        QTest.keyClick(window, Qt.Key_Down)
+        QTest.keyClick(window, Qt.Key_Return)
+        wait_for(lambda: not session_popup.property("visible"))
+        assert controller.settings["session_mode"] == "guided"
+        wait_for(lambda: not controller.preparing)
+        guide = visual_item(window.contentItem(), "guideModeChoice")
+        click(window, guide)
+        guide_popup = guide.findChild(QObject, "guideModeChoicePopup")
+        wait_for(lambda: guide_popup.property("opened"))
+        QTest.keyClick(window, Qt.Key_Down)
+        QTest.keyClick(window, Qt.Key_Return)
+        wait_for(lambda: not guide_popup.property("visible"))
+        assert controller.settings["guide_mode"] == "practice"
+        wait_for(lambda: not controller.preparing)
+        controller.seek(0.1)
+        controller.markLoop("a")
+        controller.seek(0.5)
+        controller.markLoop("b")
+        assert controller.settings["loop_enabled"]
+        assert window.grabWindow().save(str(output / "guided-dark.png"))
+        controller.markLoop("clear")
+        controller.setSetting("session_mode", "auto")
+        wait_for(lambda: not controller.preparing)
+        window.setProperty("page", 2)
+        pause(250)
+        flickable = window.findChild(QObject, "settingsScroll").property("contentItem")
+        flickable.setProperty("contentY", 950)
+        pause(150)
+        assert window.grabWindow().save(str(output / "chroma-settings.png"))
+        flickable.setProperty("contentY", 0)
         controller.setSetting("reduced_motion", True)
         assert controller.settings["reduced_motion"]
         for width, height in ((1040, 720), (1600, 1000)):

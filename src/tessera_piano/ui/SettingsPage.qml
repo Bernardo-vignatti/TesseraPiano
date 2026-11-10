@@ -4,6 +4,7 @@ import QtQuick.Layouts
 
 ScrollView {
     id: scroll
+    objectName: "settingsScroll"
     signal setupRequested()
     clip: true
     contentWidth: availableWidth
@@ -34,11 +35,13 @@ ScrollView {
                 SettingRow { width: parent.width; title: "Conferir o instrumento"; detail: "Os testes iniciam após a contagem. Volte ao piano."; editor: Row { spacing: 6; TButton { text: "Pedal"; compact: true; onClicked: backend.testInstrument("pedal") } TButton { text: "Alcance"; compact: true; onClicked: backend.testInstrument("range") } } }
             }
         }
+        LearningSettings { width: parent.width }
         Text { text: "ATUALIZAÇÕES"; color: Theme.faint; font.family: Theme.font; font.pixelSize: 10; font.letterSpacing: 1.5 }
         Surface {
             width: parent.width; height: updatesColumn.height
             Column {
                 id: updatesColumn; width: parent.width
+                SettingRow { width: parent.width; title: "Canal de versões"; detail: "Betas recebem recursos em avaliação."; editor: Choice { objectName: "channelChoice"; model: ["Estável", "Beta"]; currentIndex: backend.settings.update_channel === "beta" ? 1 : 0; onActivated: index => backend.setSetting("update_channel", index ? "beta" : "stable") } }
                 SettingRow { width: parent.width; title: "Verificar automaticamente"; detail: "Consulta o GitHub uma vez por dia ao abrir o aplicativo."; editor: TSwitch { checked: backend.settings.check_updates; text: checked ? "Ativado" : "Desativado"; onToggled: backend.setSetting("check_updates",checked) } }
                 SettingRow { width: parent.width; title: "Baixar atualizações automaticamente"; detail: "A instalação acontece quando você escolher atualizar."; editor: TSwitch { checked: backend.settings.auto_download; text: checked ? "Ativado" : "Desativado"; onToggled: backend.setSetting("auto_download",checked) } }
                 Column {

@@ -16,10 +16,11 @@ RowLayout {
                 x: 22; y: 20; width: parent.width - 44; spacing: 10
                 Text { text: backend.song.personal ? "BIBLIOTECA PESSOAL" : "COLEÇÃO TESSERA"; color: Theme.accent; font.family: Theme.font; font.pixelSize: 9; font.letterSpacing: 1.6 }
                 Text { width: parent.width; text: backend.song.title; elide: Text.ElideRight; color: Theme.text; font.family: Theme.titleFont; font.pixelSize: page.wide ? 32 : 29; font.letterSpacing: -.8 }
-                Text { text: backend.song.preparing ? "Preparando…" : root.timeText(backend.song.duration) + "  ·  " + backend.settings.layout + " teclas"; color: Theme.muted; font.family: Theme.font; font.pixelSize: 12 }
+                Text { text: backend.song.preparing ? "Preparando… " + Math.round(backend.features.analysisProgress * 100) + "%" : root.timeText(backend.song.duration) + "  ·  " + backend.settings.layout + " teclas"; color: Theme.muted; font.family: Theme.font; font.pixelSize: 12 }
             }
             Row {
                 anchors.right: parent.right; anchors.rightMargin: 14; anchors.bottom: parent.bottom; anchors.bottomMargin: 12; spacing: 6
+                TButton { text: "Cancelar preparação"; compact: true; visible: backend.song.preparing; onClicked: backend.cancelPreparation() }
                 TButton {
                     objectName: "interpretationButton"
                     text: "Interpretação"; compact: true; visible: !page.wide
@@ -95,7 +96,7 @@ RowLayout {
         }
         Text {
             Layout.fillWidth: true
-            text: backend.playback.status === "countdown" ? "Selecione o piano no Roblox. Começa em " + backend.playback.countdown + " s." : "F6 inicia · F8 ou Esc interrompem."
+            text: backend.playback.status === "countdown" ? "Selecione o piano no Roblox. Começa em " + backend.playback.countdown + " s." : (backend.features.summary || "F6 inicia · F8 encerra suavemente · Esc interrompe.")
             font.family: Theme.font; font.pixelSize: 11; color: Theme.muted
         }
     }

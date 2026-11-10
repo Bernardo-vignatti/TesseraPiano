@@ -1,6 +1,6 @@
 # Interpretação local e prática Chroma
 
-Proposta de implementação para aprovação. Base: 4.1.1, analisada em 10/11/2026. Nenhuma alteração no funcionamento do aplicativo nesta etapa.
+Plano aprovado para a beta 4.2, com base na análise da 4.1.1 em 10/11/2026. A implementação acrescenta a parada suave solicitada após a aprovação.
 
 ## Escopo confirmado
 
@@ -77,6 +77,8 @@ Nesse modo, o app não injeta notas nem pedal: a pessoa toca. A primeira versão
 Notas, orientação e avaliação compartilham o relógio musical. A saída Chroma trabalha em um trabalhador separado, inicialmente até 30 quadros/s, com atualização do estado mais recente e sem fila crescente de quadros atrasados. A antecedência de leitura e a latência das luzes serão calibradas no teclado físico. Ao trocar de janela, pausar a sessão; desconexão, bloqueio do Windows, reconexão e encerramento devem liberar recursos.
 
 ## Integração e interface
+
+F8 solicita uma saída curta, concluindo o próximo grupo próximo, desacelerando e liberando notas e pedal. A saída é limitada a cerca de 1,3 segundo. Segundo F8, Esc, perda de foco e falhas mantêm interrupção imediata. No guiado, F8 reduz a iluminação antes de encerrar; a execução das notas continua sendo da pessoa.
 
 Reaproveitar `Song`, importação, biblioteca, agendamento, saída Windows e componentes QML. Criar somente as fronteiras necessárias: análise musical, adaptador do modelo/cache e sessão guiada/adaptador Chroma. Não montar um sistema genérico de plugins ou duplicar o player. A inferência nunca roda na thread da interface nem no agendador de eventos.
 

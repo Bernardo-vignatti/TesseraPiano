@@ -31,6 +31,22 @@ No CI, `TESSERA_TEST_REDUCED_MOTION=1` exercita os controles com movimento reduz
 
 O caminho normal, sem `--preview`, envia entradas apenas após o usuário iniciar e selecionar o Roblox. Qualidade sonora, mapeamento e pedal devem ser conferidos no instrumento do jogo; testes simulados não verificam o áudio recebido.
 
+No modo Guiado, apenas a entrada física é observada e a iluminação é enviada ao Chroma. `guided.py` não recebe uma saída de automação. Testes usam um leitor sem métodos de envio para verificar essa separação. F8 é uma solicitação separada do cancelamento imediato; Esc e a troca da janela continuam sendo emergências.
+
+## Pacote musical opcional
+
+`analysis.py` e `preparation.py` fazem análise e cache. O modelo é executado por `resources/model_worker.py` em outro processo, com ambiente offline e Python embarcado. O aplicativo principal não depende de PyTorch. O pacote guarda somente fontes e pesos públicos fixados por revisão, bibliotecas CPU e licenças; músicas e perfis não entram nele.
+
+Para compilar o pacote separado no Windows, com Python 3.12 disponível:
+
+```powershell
+.venv\Scripts\python scripts\build_model_pack.py --key-file CAMINHO_DA_CHAVE_PRIVADA
+```
+
+O script usa `packaging/model-requirements.lock`, cria o runtime em `.local/model-build`, executa uma inferência real com notas conhecidas e gera `.local/model-release/pianist-cpu-1.zip` e `models.json`. A chave deve corresponder à chave pública do app e ficar fora do projeto. O manifesto assina origem, versão, tamanho e hash. Publique ambos como assets da release indicada em `model_pack.py`, junto ao instalador. O download é validado antes de extrair, com bloqueio de caminhos externos e limite de tamanho descompactado.
+
+No ensaio local, um trecho de 120 notas foi preservado pelo modelo em CPU; após o aquecimento do runtime, preparação levou cerca de 15 s, pico de memória de 1,1 GiB e leitura do cache de 7 ms. Esses valores descrevem esse ensaio, não uma garantia para outros computadores ou músicas. A sequência física de números, letras e modificadores do Chroma foi confirmada em um Cynosa Chroma. A naturalidade sonora no jogo requer escuta; outros modelos de teclado precisam de validação física.
+
 ## Compilar
 
 Instale [Inno Setup 6](https://jrsoftware.org/isinfo.php). No Windows:
@@ -44,6 +60,8 @@ Use `--iscc CAMINHO` se o compilador estiver fora do local padrão. O script exe
 ## Publicar uma versão
 
 Atualize `src/tessera_piano/__init__.py` e o changelog. Execute as verificações e crie uma tag `vVERSÃO`. O pacote e o instalador usam essa definição de versão. O workflow constrói o instalador e o manifesto em uma release de rascunho, que ainda não é oferecida pelo atualizador.
+
+Tags com hífen são publicadas como pré-lançamento após a validação. O canal Estável consulta somente releases estáveis; o canal Beta também admite pré-lançamentos autenticados. O instalador da beta não torna essa versão a mais recente do canal estável.
 
 Baixe os arquivos desse rascunho, confira o manifesto e execute `scripts/verify_installation.py --baseline INSTALADOR_ANTERIOR --installer INSTALADOR_NOVO`. O ensaio usa diretórios temporários e verifica instalação, recuperação, preferências, músicas e remoção de recursos obsoletos. Após passar, publique o rascunho como release mais recente no GitHub. O workflow não publica antes dessa conferência.
 

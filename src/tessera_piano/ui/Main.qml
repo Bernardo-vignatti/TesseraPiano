@@ -135,7 +135,7 @@ ApplicationWindow {
                         width: parent.width; spacing: 22
                         Text { text: "Do arquivo ao seu piano"; font.family: Theme.font; font.pixelSize: 24; font.weight: Font.DemiBold; color: Theme.text }
                         Text { Layout.fillWidth: true; text: "Importe MIDI, JSON ou TXT. Abra o piano no Roblox, feche o chat e pressione F6. Volte ao jogo durante a contagem."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
-                        Text { text: "F6  Iniciar     F8 / Esc  Parar     Ctrl+O  Importar     Ctrl+F  Buscar"; font.family: Theme.font; font.pixelSize: 13; color: Theme.accent }
+                        Text { text: "F6  Iniciar     F8  Saída suave     Esc  Parar     Ctrl+O  Importar     Ctrl+F  Buscar"; font.family: Theme.font; font.pixelSize: 13; color: Theme.accent }
                         Rectangle { Layout.fillWidth: true; height: 1; color: Theme.line }
                         Text { text: "Pedal e interpretação"; font.family: Theme.font; font.pixelSize: 18; font.weight: Font.DemiBold; color: Theme.text }
                         Text { Layout.fillWidth: true; text: "Espaço solto liga a sustentação; segurar desliga. Automático segue o CC64 ou cria pedal contextual. Natural e Expressivo acrescentam fraseado. O teclado comum não transmite velocity MIDI."; wrapMode: Text.WordWrap; lineHeight: 1.4; font.family: Theme.font; font.pixelSize: 14; color: Theme.muted }
@@ -188,7 +188,7 @@ ApplicationWindow {
                     Layout.fillWidth: true
                     Text { text: root.timeText(backend.playback.position) + " / " + root.timeText(backend.song.duration); font.family: Theme.font; font.pixelSize: 10; color: Theme.muted }
                     Item { Layout.fillWidth: true }
-                    Text { text: backend.playback.status === "countdown" ? "COMEÇA EM " + backend.playback.countdown + " s" : backend.settings.speed + "%"; font.family: Theme.font; font.pixelSize: 10; color: backend.playback.busy ? Theme.accent : Theme.faint }
+                    Text { text: backend.playback.status === "countdown" ? "COMEÇA EM " + backend.playback.countdown + " s" : backend.playback.speed + "%"; font.family: Theme.font; font.pixelSize: 10; color: backend.playback.busy ? Theme.accent : Theme.faint }
                 }
             }
             Text { text: backend.playback.busy ? "F8  PARAR" : "F6  INICIAR"; font.family: Theme.font; font.pixelSize: 10; font.letterSpacing: 1; color: Theme.faint }

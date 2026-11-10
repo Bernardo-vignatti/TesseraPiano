@@ -145,7 +145,7 @@ TPopup {
                     TSwitch { text: "Fechar a janela para a bandeja"; checked: wizard.chosenTray; onToggled: wizard.chosenTray=checked }
                     TSwitch { text: "Reduzir animações da interface"; checked: wizard.chosenMotion; onToggled: wizard.chosenMotion=checked }
                     TSwitch { text: "Verificar novas versões no GitHub"; checked: wizard.chosenUpdates; onToggled: wizard.chosenUpdates=checked }
-                    Text { Layout.fillWidth: true; text: "F6 inicia a música após a contagem. F8 ou Esc interrompem e soltam as teclas. Ao mudar de janela durante a execução, o Tessera para."; wrapMode: Text.WordWrap; lineHeight: 1.35; font.family: Theme.font; font.pixelSize: 13; color: Theme.muted }
+                    Text { Layout.fillWidth: true; text: "F6 inicia a música após a contagem. F8 encerra suavemente; Esc interrompe imediatamente. Ao mudar de janela durante a execução, o Tessera para."; wrapMode: Text.WordWrap; lineHeight: 1.35; font.family: Theme.font; font.pixelSize: 13; color: Theme.muted }
                     Item { Layout.fillHeight: true }
                 }
             }
